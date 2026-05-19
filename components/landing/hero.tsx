@@ -37,7 +37,7 @@ export function Hero() {
           <Image
             src="/Reviso-landingPage/Logo.png"
             // src="/Logo.png"
-            alt="Reviso logo"
+            alt="Reviso AI flashcard app logo"
             width={80}
             height={32}
             className="block h-8 w-auto sm:h-10 select-none"
@@ -46,7 +46,7 @@ export function Hero() {
           <Image
             src="/Reviso-landingPage/Branding.png"
             // src="/Branding.png"
-            alt="Reviso branding"
+            alt="Reviso - AI-powered learning companion branding"
             width={120}
             height={24}
             className="block h-3.5 w-auto sm:h-5 select-none"
@@ -88,12 +88,12 @@ export function Hero() {
 
           <h1 className="mx-auto max-w-5xl text-balance text-5xl font-semibold leading-[0.94] tracking-[-0.06em] text-white sm:text-6xl md:text-7xl lg:text-[6.25rem]">
             Boost Your
-            Learning <br className="hidden sm:block" />
+            Learning with <span className="text-cyan-400">AI Flashcards</span> <br className="hidden sm:block" />
             with Reviso.
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-sm leading-6 text-white/72 sm:text-base">
-            Turn images, notes, and lessons into smart flashcards, active recall, and study plans that fit the way you learn.
+            Turn images, notes, and lessons into smart flashcards, active recall, and study plans that fit the way you learn. The best AI-powered study app for students.
           </p>
 
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -182,9 +182,9 @@ export function Hero() {
                 <Image
                   src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
                   // src="/reviso-homescreen-mockup-half-trans.png"
-                  alt="Reviso flashcard app interface"
-                  width={420}
-                  height={840}
+                  alt="Reviso study app showing progress tracking and flashcard review dashboard"
+                  width={320}
+                  height={640}
                   className="block h-auto w-full select-none"
                   priority
                 />

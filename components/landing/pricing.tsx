@@ -1,9 +1,9 @@
 import { Check } from "lucide-react"
 
 const tiers = [
-  { num: "01", name: "Free", price: "$0", cadence: "forever", desc: "For the curious. Everything you need to start remembering.", features: ["50 AI cards / month", "Spaced repetition", "Web & mobile", "Basic analytics"], cta: "Start free" },
-  { num: "02", name: "Pro", price: "$9", cadence: "per month", desc: "For serious learners who study every day.", features: ["Unlimited AI cards", "Advanced review modes", "PDF & image import", "Detailed insights", "Priority support"], cta: "Go Pro", featured: true },
-  { num: "03", name: "Team", price: "$24", cadence: "per user / month", desc: "For study groups, classes, and small teams.", features: ["Everything in Pro", "Shared decks", "Collaboration tools", "Admin dashboard", "Custom branding"], cta: "Contact us" },
+  { num: "01", name: "Free", price: "$0", cadence: "forever", desc: "Start learning with AI flashcards for free. Everything you need to begin studying smarter.", features: ["50 AI cards / month", "Spaced repetition system", "Web & mobile access", "Basic study analytics"], cta: "Start free" },
+  { num: "02", name: "Pro", price: "$9", cadence: "per month", desc: "Unlock unlimited AI flashcards for serious students who study daily.", features: ["Unlimited AI flashcards", "Advanced review modes", "PDF & image import", "Detailed study insights", "Priority support"], cta: "Go Pro", featured: true },
+  { num: "03", name: "Team", price: "$24", cadence: "per user / month", desc: "Collaborative flashcard study for groups, classes, and teams.", features: ["Everything in Pro", "Shared flashcard decks", "Collaboration tools", "Admin dashboard", "Custom branding"], cta: "Contact us" },
 ]
 
 export function Pricing() {

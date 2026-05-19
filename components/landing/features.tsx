@@ -1,10 +1,10 @@
 import { Sparkles, Brain, BarChart3, Zap } from "lucide-react"
 
 const features = [
-  { num: "01", icon: Sparkles, title: "AI Card Generation", desc: "Paste notes, PDFs, or articles. Reviso extracts what matters and writes the cards for you." },
-  { num: "02", icon: Brain, title: "Spaced Repetition", desc: "Cards resurface exactly when you're about to forget them. Memory, on autopilot." },
-  { num: "03", icon: BarChart3, title: "Progress Insight", desc: "See what you've mastered and where you're slipping. Quiet analytics, no noise." },
-  { num: "04", icon: Zap, title: "Adaptive Review", desc: "Sessions tune themselves to your weak spots. Less time, more retention." },
+  { num: "01", icon: Sparkles, title: "AI Flashcard Generation", desc: "Paste notes, PDFs, or articles. Reviso AI extracts key concepts and creates optimized flashcards automatically for faster learning." },
+  { num: "02", icon: Brain, title: "Spaced Repetition System", desc: "Cards resurface exactly when you're about to forget them. Our spaced repetition algorithm maximizes memory retention on autopilot." },
+  { num: "03", icon: BarChart3, title: "Study Progress Analytics", desc: "Track what you've mastered and identify weak areas. Data-driven study insights help you focus on what matters most." },
+  { num: "04", icon: Zap, title: "Adaptive Review Sessions", desc: "Study sessions automatically adjust to your weak spots. Spend less time studying while achieving better knowledge retention." },
 ]
 
 export function Features() {

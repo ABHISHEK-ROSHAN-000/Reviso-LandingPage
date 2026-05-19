@@ -1,7 +1,7 @@
 const quotes = [
-  { text: "I stopped re-reading my notes a month ago. Reviso just asks me what matters until I know it.", name: "Maya R.", role: "Med student, year 3" },
-  { text: "It's the first study tool that doesn't feel like another app I have to manage. It just works in the background.", name: "Daniel K.", role: "PhD candidate, Linguistics" },
-  { text: "I dropped three flashcard apps for this. The AI cards are actually thoughtful — not just sentence chopping.", name: "Priya S.", role: "Bar exam prep" },
+  { text: "I stopped re-reading my notes a month ago. Reviso just asks me what matters until I know it. Best AI study app I've used.", name: "Maya R.", role: "Med student, year 3" },
+  { text: "It's the first study tool that doesn't feel like another app I have to manage. The spaced repetition just works in the background.", name: "Daniel K.", role: "PhD candidate, Linguistics" },
+  { text: "I dropped three flashcard apps for this. The AI-generated cards are actually thoughtful — not just sentence chopping. Perfect for exam prep.", name: "Priya S.", role: "Bar exam prep" },
 ]
 
 export function Testimonials() {

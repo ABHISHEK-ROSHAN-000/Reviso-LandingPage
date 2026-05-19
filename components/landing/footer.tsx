@@ -21,7 +21,7 @@ export function Footer() {
               <span className="font-serif text-lg italic">Reviso</span>
             </Link>
             <p className="mt-6 max-w-sm font-serif text-lg italic leading-relaxed text-muted-foreground">
-              A quieter way to remember what you read.
+              Reviso - AI-powered flashcard app for smarter studying. Remember what you learn.
             </p>
           </div>
 

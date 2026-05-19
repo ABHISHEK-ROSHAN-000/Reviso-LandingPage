@@ -20,9 +20,9 @@ export function CTA() {
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 py-32 text-center lg:py-44">
         <p className="mb-8 font-mono text-[11px] uppercase tracking-[0.25em] text-foreground/60">[ 05 / Begin ]</p>
         <h2 className="font-serif text-4xl italic leading-tight text-balance text-foreground/95 sm:text-5xl lg:text-6xl">
-          The next thing you read
+          Start Learning Smarter
           <br />
-          could be the next thing
+          with AI Flashcards
           <br />
           you <span className="underline decoration-foreground/30 underline-offset-[6px]">never forget</span>.
         </h2>
