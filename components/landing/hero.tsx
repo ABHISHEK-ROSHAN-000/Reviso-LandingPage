@@ -16,7 +16,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(72,85,255,0.20),transparent_28%),radial-gradient(circle_at_20%_40%,rgba(34,211,238,0.12),transparent_18%),radial-gradient(circle_at_80%_42%,rgba(168,85,247,0.18),transparent_22%),linear-gradient(to_bottom,#070707_0%,#040404_55%,#050505_100%)]" />
 
       {/* Faint grid */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.45] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,black_28%,transparent_78%)]" />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.50] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,black_28%,transparent_78%)]" />
 
       {/* Orb left */}
       <div className="pointer-events-none absolute -left-28 top-36 h-72 w-72 rounded-full bg-violet-500/35 blur-3xl" />
@@ -29,8 +29,6 @@ export function Hero() {
 
       {/* Small floating glow */}
       <div className="pointer-events-none absolute left-1/2 top-48 h-24 w-24 -translate-x-1/2 rounded-full bg-cyan-400/35 blur-2xl" />
-
-      <div className="pointer-events-none absolute -left-28 top-36 h-72 w-72 rounded-full bg-violet-500/35 blur-3xl animate-pulse" />
 
       <header className="relative z-20 mx-auto flex w-full max-w-[1400px] items-center justify-between px-5 py-5 sm:px-8 lg:px-10 bg-transparent">
   <div className="flex items-center gap-3 text-sm font-medium tracking-[-0.02em] text-white/92">
