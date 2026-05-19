@@ -16,7 +16,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(72,85,255,0.20),transparent_28%),radial-gradient(circle_at_20%_40%,rgba(34,211,238,0.12),transparent_18%),radial-gradient(circle_at_80%_42%,rgba(168,85,247,0.18),transparent_22%),linear-gradient(to_bottom,#070707_0%,#040404_55%,#050505_100%)]" />
 
       {/* Faint grid */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.50] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,black_28%,transparent_78%)]" />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.45] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,black_28%,transparent_78%)]" />
 
       {/* Orb left */}
       <div className="pointer-events-none absolute -left-28 top-36 h-72 w-72 rounded-full bg-violet-500/35 blur-3xl" />
@@ -160,7 +160,7 @@ export function Hero() {
           {/* Phone mockup */}
           <div className="relative mx-auto w-[min(86vw,360px)] sm:w-[390px] lg:w-[420px]">
             <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
-            <div className="relative overflow-hidden shadow-[0_30px_120px_rgba(0,0,0,0.75)]">
+            <div className="relative overflow-hidden">
               <Image
                 src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
                 alt="Reviso flashcard app interface"
