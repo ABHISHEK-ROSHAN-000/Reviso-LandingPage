@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
+  basePath: "/Reviso-landingPage",
+  assetPrefix: "/Reviso-landingPage/",
   images: {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
