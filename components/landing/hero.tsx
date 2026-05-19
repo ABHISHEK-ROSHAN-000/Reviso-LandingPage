@@ -27,7 +27,7 @@ export function Hero() {
                 priority
               />
     <Image
-                src="/branding.png"
+                src="/Branding.png"
                 alt="Reviso branding"
                 width={120}
                 height={24}
