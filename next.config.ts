@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
+const isDev = process.env.NODE_ENV === "development";
+
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: "/Reviso-landingPage",
-  assetPrefix: "/Reviso-landingPage",
+  output: isDev ? undefined : 'export',
+  basePath: isDev ? undefined : "/Reviso-landingPage",
+  assetPrefix: isDev ? undefined : "/Reviso-landingPage",
   images: {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],

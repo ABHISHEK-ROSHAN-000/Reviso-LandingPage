@@ -38,6 +38,7 @@ export function Hero() {
     {/* <span className="uppercase tracking-[0.22em] text-white/90">Reviso</span> */}
     <Image
                 src="/Reviso-landingPage/Logo.png"
+                // src="/Logo.png"
                 alt="Reviso logo"
                 width={80}
                 height={32}
@@ -46,6 +47,7 @@ export function Hero() {
               />
     <Image
                 src="/Reviso-landingPage/Branding.png"
+                // src="/Reviso-landingPage/Branding.png"
                 alt="Reviso branding"
                 width={120}
                 height={24}
@@ -163,6 +165,7 @@ export function Hero() {
             <div className="relative overflow-hidden">
               <Image
                 src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
+                // src="/reviso-homescreen-mockup-half-trans.png"
                 alt="Reviso flashcard app interface"
                 width={420}
                 height={840}
