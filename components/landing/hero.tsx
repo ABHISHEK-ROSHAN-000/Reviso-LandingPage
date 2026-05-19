@@ -30,6 +30,8 @@ export function Hero() {
       {/* Small floating glow */}
       <div className="pointer-events-none absolute left-1/2 top-48 h-24 w-24 -translate-x-1/2 rounded-full bg-cyan-400/35 blur-2xl" />
 
+      <div className="pointer-events-none absolute -left-28 top-36 h-72 w-72 rounded-full bg-violet-500/35 blur-3xl animate-pulse" />
+
       <header className="relative z-20 mx-auto flex w-full max-w-[1400px] items-center justify-between px-5 py-5 sm:px-8 lg:px-10 bg-transparent">
   <div className="flex items-center gap-3 text-sm font-medium tracking-[-0.02em] text-white/92">
     {/* <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur-md">
