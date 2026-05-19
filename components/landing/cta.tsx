@@ -8,7 +8,7 @@ export function CTA() {
     <section id="download" className="relative overflow-hidden border-t border-border/50">
       <div className="absolute inset-0">
         <Image
-          src="/starry-night.svg"
+          src="/Reviso-landingPage/starry-night.svg"
           alt=""
           fill
           className="object-cover opacity-60"
