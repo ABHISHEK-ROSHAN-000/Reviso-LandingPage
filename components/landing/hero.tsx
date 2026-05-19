@@ -144,7 +144,7 @@ export function Hero() {
             <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
             <div className="relative overflow-hidden shadow-[0_30px_120px_rgba(0,0,0,0.75)]">
               <Image
-                src="/reviso-homescreen-mockup-half-trans.png"
+                src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
                 alt="Reviso flashcard app interface"
                 width={420}
                 height={840}
