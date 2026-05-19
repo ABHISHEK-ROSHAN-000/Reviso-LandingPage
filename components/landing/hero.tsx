@@ -19,7 +19,7 @@ export function Hero() {
     </div> */}
     {/* <span className="uppercase tracking-[0.22em] text-white/90">Reviso</span> */}
     <Image
-                src="/Logo.png"
+                src="/Reviso-landingPage//Logo.png"
                 alt="Reviso logo"
                 width={80}
                 height={32}
@@ -27,7 +27,7 @@ export function Hero() {
                 priority
               />
     <Image
-                src="/Branding.png"
+                src="/Reviso-landingPage//Branding.png"
                 alt="Reviso branding"
                 width={120}
                 height={24}
