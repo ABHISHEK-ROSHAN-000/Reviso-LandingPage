@@ -16,7 +16,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(72,85,255,0.20),transparent_28%),radial-gradient(circle_at_20%_40%,rgba(34,211,238,0.12),transparent_18%),radial-gradient(circle_at_80%_42%,rgba(168,85,247,0.18),transparent_22%),linear-gradient(to_bottom,#070707_0%,#040404_55%,#050505_100%)]" />
 
       {/* Faint grid */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.45] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,black_28%,transparent_78%)]" />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.40] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,black_28%,transparent_78%)]" />
 
       {/* Orb left */}
       <div className="pointer-events-none absolute -left-28 top-36 h-72 w-72 rounded-full bg-violet-500/35 blur-3xl" />
@@ -31,55 +31,53 @@ export function Hero() {
       <div className="pointer-events-none absolute left-1/2 top-48 h-24 w-24 -translate-x-1/2 rounded-full bg-cyan-400/35 blur-2xl" />
 
       <header className="relative z-20 mx-auto flex w-full max-w-[1400px] items-center justify-between px-5 py-5 sm:px-8 lg:px-10 bg-transparent">
-  <div className="flex items-center gap-3 text-sm font-medium tracking-[-0.02em] text-white/92">
-    {/* <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur-md">
-      <span className="text-sm"></span>
-    </div> */}
-    {/* <span className="uppercase tracking-[0.22em] text-white/90">Reviso</span> */}
-    <Image
-                src="/Reviso-landingPage/Logo.png"
-                // src="/Logo.png"
-                alt="Reviso logo"
-                width={80}
-                height={32}
-                className="block h-8 w-auto sm:h-10 select-none"
-                priority
-              />
-    <Image
-                src="/Reviso-landingPage/Branding.png"
-                // src="/Reviso-landingPage/Branding.png"
-                alt="Reviso branding"
-                width={120}
-                height={24}
-                className="block h-3.5 w-auto sm:h-5 select-none"
-                priority
-              />
-  </div>
 
-  {/* <nav className="hidden items-center gap-10 text-[13px] text-white/70 md:flex">
+
+        <div className="flex items-center gap-3 text-sm font-medium tracking-[-0.02em] text-white/92">
+          <Image
+            src="/Reviso-landingPage/Logo.png"
+            // src="/Logo.png"
+            alt="Reviso logo"
+            width={80}
+            height={32}
+            className="block h-8 w-auto sm:h-10 select-none"
+            priority
+          />
+          <Image
+            src="/Reviso-landingPage/Branding.png"
+            // src="/Branding.png"
+            alt="Reviso branding"
+            width={120}
+            height={24}
+            className="block h-3.5 w-auto sm:h-5 select-none"
+            priority
+          />
+        </div>
+
+        {/* <nav className="hidden items-center gap-10 text-[13px] text-white/70 md:flex">
     <a className="transition-colors hover:text-white" href="#products">Products</a>
     <a className="transition-colors hover:text-white" href="#solutions">Solutions</a>
     <a className="transition-colors hover:text-white" href="#pricing">Pricing</a>
   </nav> */}
 
-  <div className="flex items-center gap-3 sm:flex">
-    {/* <a
+        <div className="flex items-center gap-3 sm:flex">
+          {/* <a
       href="#login"
       className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/85 backdrop-blur-md transition hover:bg-white/10"
     >
       Log in
     </a> */}
 
-    <a className="hidden sm:flex transition-colors hover:text-white" href="#pricing">Pricing</a>
+          <a className="hidden sm:flex transition-colors hover:text-white" href="#pricing">Pricing</a>
 
-    <a
-      href="#download"
-      className="rounded-full border border-white/15 bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90"
-    >
-      Download App
-    </a>
-  </div>
-</header>
+          <a
+            href="#download"
+            className="rounded-full border border-white/15 bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90"
+          >
+            Download App
+          </a>
+        </div>
+      </header>
 
       {/* Hero content */}
       <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col items-center px-5 pb-10 pt-15 sm:px-8 sm:pt-30 lg:px-10 lg:pb-14">
@@ -89,7 +87,7 @@ export function Hero() {
           </p> */}
 
           <h1 className="mx-auto max-w-5xl text-balance text-5xl font-semibold leading-[0.94] tracking-[-0.06em] text-white sm:text-6xl md:text-7xl lg:text-[6.25rem]">
-            Boost Your 
+            Boost Your
             Learning <br className="hidden sm:block" />
             with Reviso.
           </h1>
@@ -159,19 +157,54 @@ export function Hero() {
             </div>
           </div> */}
 
-          {/* Phone mockup */}
-          <div className="relative mx-auto w-[min(86vw,360px)] sm:w-[390px] lg:w-[420px]">
-            <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
-            <div className="relative overflow-hidden">
-              <Image
-                src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
-                // src="/reviso-homescreen-mockup-half-trans.png"
-                alt="Reviso flashcard app interface"
-                width={420}
-                height={840}
-                className="block h-auto w-full select-none"
-                priority
-              />
+          {/* Phone mockups */}
+          <div className="relative mx-auto flex w-full max-w-7xl items-end justify-center gap-4 lg:gap-0">
+            {/* Left mockup - hidden on mobile */}
+            <div className="hidden lg:block relative w-[min(70vw,300px)] lg:w-[380px] -mr-10">
+              <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
+              <div className="relative overflow-hidden">
+                <Image
+                  src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
+                  // src="/reviso-homescreen-mockup-half-trans.png"
+                  alt="Reviso flashcard app interface"
+                  width={320}
+                  height={640}
+                  className="block h-auto w-full select-none"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Center mockup */}
+            <div className="relative z-20 w-[min(86vw,360px)] sm:w-[390px] lg:w-[420px]">
+              <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
+              <div className="relative overflow-hidden">
+                <Image
+                  src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
+                  // src="/reviso-homescreen-mockup-half-trans.png"
+                  alt="Reviso flashcard app interface"
+                  width={420}
+                  height={840}
+                  className="block h-auto w-full select-none"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Right mockup - hidden on mobile */}
+            <div className="hidden lg:block relative w-[min(70vw,300px)] lg:w-[380px] -ml-10">
+              <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
+              <div className="relative overflow-hidden">
+                <Image
+                  src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
+                  // src="/reviso-homescreen-mockup-half-trans.png"
+                  alt="Reviso flashcard app interface"
+                  width={320}
+                  height={640}
+                  className="block h-auto w-full select-none"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>

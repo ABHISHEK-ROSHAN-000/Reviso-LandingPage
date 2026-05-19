@@ -33,7 +33,7 @@ export function HowItWorks() {
 
           {/* <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border/50 bg-card">
-              <Image src="/flashcard-app-mockup.svg" alt="Reviso flashcard app shown on a phone" fill className="object-cover" />
+              <Image src="/reviso-homescreen-mockup.png" alt="Reviso flashcard app shown on a phone" fill className="object-cover" />
             </div>
             <div className="mt-6 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.25em] text-foreground/50">
               <span>FIG. 01</span>
