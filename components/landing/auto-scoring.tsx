@@ -4,7 +4,7 @@ import Image from "next/image"
 const steps = [
   { icon: Edit3, label: "Type your answer" },
   { icon: BrainCircuit, label: "AI scores it" },
-  { icon: CheckCircle, label: "Auto-converts to rating" },
+  { icon: CheckCircle, label: "Auto rating" },
 ]
 
 export function AutoScoring() {

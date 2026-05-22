@@ -2,7 +2,7 @@ import { Sparkles, Brain, BarChart3, Zap, CheckCircle } from "lucide-react"
 
 const features = [
   { num: "01", icon: Sparkles, title: "AI Flashcard Generation", desc: "Paste notes, PDFs, or articles. Reviso AI extracts key concepts and creates optimized flashcards automatically for faster learning.", badge: "Save hours of manual work" },
-  { num: "02", icon: Brain, title: "Spaced Repetition System", desc: "Cards resurface exactly when you're about to forget them. Our spaced repetition algorithm maximizes memory retention on autopilot.", badge: "Anki-compatible FSRS" },
+  { num: "02", icon: Brain, title: "Spaced Repetition System", desc: "Cards resurface exactly when you're about to forget them. Our spaced repetition algorithm maximizes memory retention on autopilot.", badge: "Anki-compatible Spaced Repetition" },
   { num: "03", icon: BarChart3, title: "Study Progress Analytics", desc: "Track what you've mastered and identify weak areas. Data-driven study insights help you focus on what matters most.", badge: "Heatmaps & charts" },
   { num: "04", icon: Zap, title: "Adaptive Review Sessions", desc: "Study sessions automatically adjust to your weak spots. Spend less time studying while achieving better knowledge retention.", badge: "AI-optimized pacing" },
 ]
