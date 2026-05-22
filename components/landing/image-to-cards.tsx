@@ -33,7 +33,7 @@ export function ImageToCards() {
                 <Image
                   src="/Reviso-landingPage/reviso-cardselectionpage-mockup.png"
                   // src="reviso-cardselectionpage-mockup.png"
-                  alt="Reviso AI card generation from images"
+                  alt="Reviso AI flashcard generation from images and notes for smarter studying"
                   width={320}
                   height={640}
                   className="block h-auto w-full select-none"

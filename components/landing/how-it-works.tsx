@@ -59,7 +59,7 @@ export function HowItWorks() {
               <div className="relative overflow-hidden">
                 <Image
                   src="/Reviso-landingPage/reviso-homescreen-mockup.png"
-                  alt="Reviso study app dashboard showing progress tracking and flashcard review"
+                  alt="Reviso AI flashcard study app with spaced repetition and progress tracking dashboard"
                   width={320}
                   height={640}
                   className="block h-auto w-full select-none"

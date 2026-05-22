@@ -37,7 +37,7 @@ export function Hero() {
           <Image
             src="/Reviso-landingPage/Logo.png"
             // src="/Logo.png"
-            alt="Reviso AI flashcard app logo"
+            alt="Reviso AI flashcard study app logo"
             width={80}
             height={32}
             className="block h-8 w-auto sm:h-10 select-none"
@@ -46,7 +46,7 @@ export function Hero() {
           <Image
             src="/Reviso-landingPage/Branding.png"
             // src="/Branding.png"
-            alt="Reviso - AI-powered learning companion branding"
+            alt="Reviso AI-powered flashcard learning app branding"
             width={120}
             height={24}
             className="block h-3.5 w-auto sm:h-5 select-none"
@@ -160,13 +160,13 @@ export function Hero() {
           {/* Phone mockups */}
           <div className="relative mx-auto flex w-full max-w-7xl items-end justify-center gap-4 lg:gap-0">
             {/* Left mockup - hidden on mobile */}
-            <div className="hidden lg:block relative w-[min(70vw,300px)] lg:w-[380px] -mr-10">
+              <div className="hidden lg:block relative w-[min(70vw,300px)] lg:w-[380px] -mr-10">
               <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
               <div className="relative overflow-hidden">
                 <Image
                   src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
                   // src="/reviso-homescreen-mockup-half-trans.png"
-                  alt="Reviso flashcard app interface"
+                  alt="Reviso AI flashcard study app with smart learning features"
                   width={320}
                   height={640}
                   className="block h-auto w-full select-none"
@@ -182,7 +182,7 @@ export function Hero() {
                 <Image
                   src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
                   // src="/reviso-homescreen-mockup-half-trans.png"
-                  alt="Reviso study app showing progress tracking and flashcard review dashboard"
+                  alt="Reviso AI flashcard study dashboard with spaced repetition and progress tracking"
                   width={320}
                   height={640}
                   className="block h-auto w-full select-none"
@@ -198,7 +198,7 @@ export function Hero() {
                 <Image
                   src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
                   // src="/reviso-homescreen-mockup-half-trans.png"
-                  alt="Reviso flashcard app interface"
+                  alt="Reviso AI study dashboard for flashcard review and progress tracking"
                   width={320}
                   height={640}
                   className="block h-auto w-full select-none"

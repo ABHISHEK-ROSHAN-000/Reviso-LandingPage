@@ -89,7 +89,7 @@ export function AutoScoring() {
                 <Image
                   src="/Reviso-landingPage/reviso-reviewscreen-mockup.png"
                   // src="reviso-reviewscreen-mockup.png"
-                  alt="Reviso AI auto-scoring review session"
+                  alt="Reviso AI flashcard review session with auto-scoring and spaced repetition"
                   width={320}
                   height={640}
                   className="block h-auto w-full select-none"
