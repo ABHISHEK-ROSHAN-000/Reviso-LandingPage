@@ -31,8 +31,8 @@ export function ImageToCards() {
               <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
               <div className="relative overflow-hidden">
                 <Image
-                  // src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
-                  src="reviso-cardselectionpage-mockup.png"
+                  src="/Reviso-landingPage/reviso-cardselectionpage-mockup.png"
+                  // src="reviso-cardselectionpage-mockup.png"
                   alt="Reviso AI card generation from images"
                   width={320}
                   height={640}

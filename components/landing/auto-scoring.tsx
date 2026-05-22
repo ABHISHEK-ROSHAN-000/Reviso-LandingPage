@@ -87,8 +87,8 @@ export function AutoScoring() {
               <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
               <div className="relative overflow-hidden">
                 <Image
-                  // src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
-                  src="reviso-reviewscreen-mockup.png"
+                  src="/Reviso-landingPage/reviso-reviewscreen-mockup.png"
+                  // src="reviso-reviewscreen-mockup.png"
                   alt="Reviso AI auto-scoring review session"
                   width={320}
                   height={640}

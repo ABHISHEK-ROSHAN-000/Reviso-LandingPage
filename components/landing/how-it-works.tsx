@@ -58,7 +58,7 @@ export function HowItWorks() {
               <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
               <div className="relative overflow-hidden">
                 <Image
-                  src="/reviso-homescreen-mockup.png"
+                  src="/Reviso-landingPage/reviso-homescreen-mockup.png"
                   alt="Reviso study app dashboard showing progress tracking and flashcard review"
                   width={320}
                   height={640}
