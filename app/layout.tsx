@@ -62,8 +62,8 @@ export const metadata: Metadata = {
   },
   category: 'Education',
   icons: {
-    icon: '/Logo%201%20r%201.png',
-    apple: '/Logo%201%20r%201.png',
+    icon: '/Reviso-landingPage/Logo%201%20r%201.png',
+    apple: '/Reviso-landingPage/Logo%201%20r%201.png',
   },
 }
 
