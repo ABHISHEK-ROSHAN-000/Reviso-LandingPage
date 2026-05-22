@@ -41,6 +41,10 @@ const jsonLd = {
         "price": "0",
         "priceCurrency": "USD"
       },
+      "screenshot": [
+        { "@type": "ImageObject", "url": `${SITE_URL}/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png` }
+      ],
+      "featureList": "AI flashcard generation, spaced repetition, progress analytics, adaptive review, image-to-cards, PDF import, AI answer scoring",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
@@ -62,6 +66,92 @@ const jsonLd = {
         "url": `${SITE_URL}/Reviso-landingPage/Logo.png`
       },
       "sameAs": []
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${SITE_URL}/#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Reviso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reviso is an AI-powered flashcard learning app that turns your notes, PDFs, and images into smart flashcards. It uses spaced repetition to help you retain information longer and study more efficiently."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Reviso free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Reviso has a generous free tier with 50 AI-generated cards per month, full spaced repetition system, and web and mobile access. Upgrade to Pro for unlimited cards and advanced features."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does spaced repetition work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reviso uses the FSRS (Free Spaced Repetition Scheduler) algorithm, the same science-backed system used by Anki. Cards resurface right before you would forget them, maximizing memory retention while minimizing study time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I import cards from Anki?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reviso is built on the same FSRS algorithm as Anki, making it fully compatible with Anki's scheduling system. Support for direct .apkg import is coming soon."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your study data is stored locally on your device by default. You can optionally sign in with Google to sync across devices. We never sell your data or use your study content to train AI models."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Reviso work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Core review functionality works offline. AI features like card generation and answer scoring require an internet connection. Your study progress syncs when you reconnect."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What platforms are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reviso is available on iOS, Android, and Web. Your progress syncs seamlessly across all platforms when signed in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Reviso generate flashcards from images?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reviso uses AI vision technology to analyze photos of textbooks, handwritten notes, or lecture slides. It extracts key concepts and automatically generates question-answer pairs. You can preview, edit, and select which cards to save."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the AI answer scoring work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When reviewing flashcards, just type your answer and Reviso AI automatically scores it and converts it into a spaced repetition rating so you do not have to grade yourself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes Reviso different from other flashcard apps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unlike traditional flashcard apps, Reviso uses AI to auto-generate cards from your study materials and auto-score your written answers. It combines an Anki-compatible spaced repetition algorithm with image scanning, progress heatmaps, daily goal tracking, and cross-platform sync."
+          }
+        }
+      ]
     }
   ]
 }

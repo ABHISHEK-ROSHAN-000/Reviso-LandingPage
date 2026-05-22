@@ -32,6 +32,18 @@ const items = [
     q: "What platforms are supported?",
     a: "Reviso is available on iOS, Android, and Web. Your progress syncs seamlessly across all platforms when signed in.",
   },
+  {
+    q: "How does Reviso generate flashcards from images?",
+    a: "Reviso uses AI vision technology to analyze photos of textbooks, handwritten notes, or lecture slides. It extracts key concepts and automatically generates question-answer pairs. You can preview, edit, and select which cards to save before adding them to your study deck.",
+  },
+  {
+    q: "How does the AI answer scoring work?",
+    a: "When reviewing flashcards, just type your answer and Reviso AI automatically scores it and converts it into a spaced repetition rating — no self-grading required.",
+  },
+  {
+    q: "What makes Reviso different from other flashcard apps?",
+    a: "Unlike traditional flashcard apps, Reviso uses AI to auto-generate cards from your study materials and auto-score your written answers. It combines an Anki-compatible spaced repetition algorithm with modern features like image scanning, progress heatmaps, daily goal tracking, and cross-platform sync — all in one app.",
+  },
 ]
 
 export function FAQ() {
@@ -57,7 +69,7 @@ export function FAQ() {
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
                   className="flex w-full items-center justify-between gap-4 text-left transition-colors hover:text-foreground/80"
                 >
-                  <span className="text-base font-medium tracking-[-0.01em]">{item.q}</span>
+                  <h3 className="text-base font-medium tracking-[-0.01em]">{item.q}</h3>
                   <ChevronDown
                     className={`h-4 w-4 shrink-0 text-foreground/40 transition-transform duration-200 ${
                       openIndex === i ? "rotate-180" : ""

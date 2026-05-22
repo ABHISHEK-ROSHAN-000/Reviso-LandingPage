@@ -1,0 +1,23 @@
+# Reviso - AI-Powered Flashcard Learning App
+> Turn notes, PDFs, and images into smart flashcards with spaced repetition.
+
+## About
+Reviso is an AI-powered flashcard study app that generates flashcards from notes, PDFs, and images. Uses the FSRS spaced repetition algorithm for optimal memory retention with AI-powered answer scoring.
+
+## Key Features
+- AI Flashcard Generation from notes, PDFs, and images
+- Spaced Repetition System (Anki-compatible FSRS algorithm)
+- AI Answer Auto-Scoring
+- Study Progress Analytics with heatmaps and charts
+- Adaptive Review Sessions
+- Daily Goals and Reminders
+- Cross-platform (iOS, Android, Web)
+
+## Use Cases
+- Medical students memorizing anatomy and pharmacology
+- Language learners building vocabulary
+- Exam preparation (MCAT, GRE, Bar, SAT)
+- Professional certifications and continuing education
+
+## Links
+- Website: https://abhishek-roshan-000.github.io/Reviso-landingPage

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Master any subject with AI-generated flashcards, spaced repetition, and intelligent review sessions. Turn notes, PDFs, and images into smart study materials. Study smarter, not harder with Reviso.',
   keywords: ['AI flashcards', 'study app', 'spaced repetition', 'active recall', 'AI learning tool', 'flashcard generator', 'study smarter', 'memory retention', 'note to flashcard', 'PDF to flashcards', 'student study tool', 'exam preparation', 'Reviso app'],
   authors: [{ name: 'Reviso Labs' }],
+  applicationName: 'Reviso',
   creator: 'Reviso Labs, Inc.',
   publisher: 'Reviso Labs, Inc.',
   formatDetection: {
@@ -42,6 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@revisoapp',
+    creator: '@revisoapp',
     title: 'Reviso - AI-Powered Flashcard Learning App',
     description: 'Master any subject with AI-generated flashcards and intelligent review sessions.',
     images: ['/Reviso-landingPage/reviso-homescreen-mockup-og.png'],

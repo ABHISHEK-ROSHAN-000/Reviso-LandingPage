@@ -26,7 +26,7 @@ export function Pricing() {
           {tiers.map((t) => (
             <div key={t.num} className={`flex flex-col gap-10 p-8 lg:p-10 ${t.featured ? "bg-card" : "bg-background"}`}>
               <div className="flex items-start justify-between">
-                <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-foreground/40">{t.num} / {t.name}</span>
+                <h3 className="font-mono text-[11px] uppercase tracking-[0.25em] text-foreground/40">{t.num} / {t.name}</h3>
                 {t.featured && (
                   <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary">Most chosen</span>
                 )}
