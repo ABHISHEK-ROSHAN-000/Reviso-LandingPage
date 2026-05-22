@@ -61,6 +61,10 @@ export const metadata: Metadata = {
     google: 'NFzf-c6yFuqzCShI06_hNiB8WuRxK1gYEnVWIWaow84',
   },
   category: 'Education',
+  icons: {
+    icon: '/Logo%201%20r%201.png',
+    apple: '/Logo%201%20r%201.png',
+  },
 }
 
 export const viewport = {

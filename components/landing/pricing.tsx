@@ -13,7 +13,7 @@ export function Pricing() {
         <div className="mb-20 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.25em] text-foreground/50">[ 04 / Pricing ]</p>
-            <h2 className="font-serif text-4xl italic leading-tight text-balance sm:text-5xl lg:text-6xl">
+            <h2 className="max-w-3xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-balance sm:text-5xl lg:text-6xl">
               Honest, <span className="underline decoration-foreground/30 underline-offset-[6px]">simple</span> pricing.
             </h2>
           </div>
@@ -34,7 +34,7 @@ export function Pricing() {
 
               <div>
                 <div className="flex items-baseline gap-2">
-                  <span className="font-serif text-5xl italic lg:text-6xl">{t.price}</span>
+                  <span className="text-5xl font-semibold tracking-[-0.04em] lg:text-6xl">{t.price}</span>
                   <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-foreground/50">{t.cadence}</span>
                 </div>
                 <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">{t.desc}</p>

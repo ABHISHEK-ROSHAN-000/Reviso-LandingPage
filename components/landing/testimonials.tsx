@@ -9,14 +9,14 @@ export function Testimonials() {
     <section className="relative border-t border-border/50 px-6 py-32 lg:px-10 lg:py-40">
       <div className="mx-auto max-w-7xl">
         <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.25em] text-foreground/50">[ 03 / Field notes ]</p>
-        <h2 className="mb-20 max-w-3xl font-serif text-4xl italic leading-tight text-balance sm:text-5xl lg:text-6xl">
+        <h2 className="mb-20 max-w-3xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-balance sm:text-5xl lg:text-6xl">
           From the people who <span className="underline decoration-foreground/30 underline-offset-[6px]">use it</span>.
         </h2>
 
         <div className="grid gap-px bg-border/50 md:grid-cols-3">
           {quotes.map((q, i) => (
             <figure key={i} className="flex flex-col justify-between gap-10 bg-background p-8 lg:p-10">
-              <blockquote className="font-serif text-xl italic leading-relaxed text-foreground/90 lg:text-2xl">
+              <blockquote className="text-lg leading-relaxed text-foreground/90 lg:text-xl">
                 &ldquo;{q.text}&rdquo;
               </blockquote>
               <figcaption className="font-mono text-[10px] uppercase tracking-[0.25em] text-foreground/50">

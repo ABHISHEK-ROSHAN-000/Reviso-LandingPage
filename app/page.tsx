@@ -1,9 +1,15 @@
 import { Header } from "@/components/landing/header";
 import { Hero } from "@/components/landing/hero";
+import { TrustBar } from "@/components/landing/trust-bar";
 import { Features } from "@/components/landing/features";
+import { AutoScoring } from "@/components/landing/auto-scoring";
+import { ImageToCards } from "@/components/landing/image-to-cards";
+import { Analytics } from "@/components/landing/analytics";
 import { HowItWorks } from "@/components/landing/how-it-works";
+import { UseCases } from "@/components/landing/use-cases";
 import { Testimonials } from "@/components/landing/testimonials";
 import { Pricing } from "@/components/landing/pricing";
+import { FAQ } from "@/components/landing/faq";
 import { CTA } from "@/components/landing/cta";
 import { Footer } from "@/components/landing/footer";
 
@@ -69,10 +75,16 @@ export default function Home() {
       />
       <Header />
       <Hero />
+      <TrustBar />
       <Features />
+      <AutoScoring />
+      <ImageToCards />
+      <Analytics />
       <HowItWorks />
+      <UseCases />
       <Testimonials />
       <Pricing />
+      <FAQ />
       <CTA />
       <Footer />
     </main>
