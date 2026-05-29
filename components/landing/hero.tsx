@@ -68,7 +68,6 @@ export function Hero() {
       Log in
     </a> */}
 
-          <a className="hidden sm:flex transition-colors hover:text-white" href="#pricing">Pricing</a>
 
           <a
             href="#download"

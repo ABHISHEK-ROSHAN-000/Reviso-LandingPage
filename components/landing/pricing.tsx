@@ -1,9 +1,7 @@
 import { Check } from "lucide-react"
 
 const tiers = [
-  { num: "01", name: "Free", price: "$0", cadence: "forever", desc: "Start learning with AI flashcards for free. Everything you need to begin studying smarter.", features: ["50 AI cards / month", "Spaced repetition system", "Web & mobile access", "Basic study analytics"], cta: "Start free" },
-  { num: "02", name: "Pro", price: "$9", cadence: "per month", desc: "Unlock unlimited AI flashcards for serious students who study daily.", features: ["Unlimited AI flashcards", "Advanced review modes", "PDF & image import", "Detailed study insights", "Priority support"], cta: "Go Pro", featured: true },
-  { num: "03", name: "Team", price: "$24", cadence: "per user / month", desc: "Collaborative flashcard study for groups, classes, and teams.", features: ["Everything in Pro", "Shared flashcard decks", "Collaboration tools", "Admin dashboard", "Custom branding"], cta: "Contact us" },
+  { num: "01", name: "Free", price: "$0", cadence: "forever", desc: "Start learning with AI flashcards for free. Everything you need to begin studying smarter.", features: ["100 credits / day", "Refreshes every 24hrs", "Spaced repetition system", "Contains ads"], cta: "Start free" },
 ]
 
 export function Pricing() {
@@ -18,18 +16,15 @@ export function Pricing() {
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Start free. Upgrade only when Reviso has earned a place in your routine.
+            Get started for free — no credit card required.
           </p>
         </div>
 
-        <div className="grid gap-px bg-border/50 md:grid-cols-3">
+        <div className="mx-auto grid max-w-md gap-px bg-border/50 md:grid-cols-1">
           {tiers.map((t) => (
-            <div key={t.num} className={`flex flex-col gap-10 p-8 lg:p-10 ${t.featured ? "bg-card" : "bg-background"}`}>
+            <div key={t.num} className="flex flex-col gap-10 p-8 lg:p-10 bg-card">
               <div className="flex items-start justify-between">
                 <h3 className="font-mono text-[11px] uppercase tracking-[0.25em] text-foreground/40">{t.num} / {t.name}</h3>
-                {t.featured && (
-                  <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary">Most chosen</span>
-                )}
               </div>
 
               <div>

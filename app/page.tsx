@@ -84,7 +84,7 @@ const jsonLd = {
           "name": "Is Reviso free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes! Reviso has a generous free tier with 50 AI-generated cards per month, full spaced repetition system, and web and mobile access. Upgrade to Pro for unlimited cards and advanced features."
+            "text": "Yes! Reviso is completely free. You get 100 credits every day that refresh after 24 hours, full spaced repetition system, and web and mobile access. The free plan includes ads."
           }
         },
         {

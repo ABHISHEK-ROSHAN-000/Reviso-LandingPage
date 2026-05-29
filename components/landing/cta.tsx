@@ -19,9 +19,7 @@ export function CTA() {
             <span>Get Reviso free</span>
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </a>
-          <a href="#pricing" className="font-mono text-xs uppercase tracking-[0.25em] text-foreground/60 transition-colors hover:text-foreground">
-            See pricing
-          </a>
+
         </div>
       </div>
     </section>
