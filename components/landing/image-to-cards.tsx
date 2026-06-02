@@ -64,7 +64,7 @@ export function ImageToCards() {
                 </div>
                 <div>
                   <p className="text-sm font-medium">Supported formats</p>
-                  <p className="text-xs text-muted-foreground">PDF, PNG, JPG, WebP · Up to 10MB per image</p>
+                  <p className="text-xs text-muted-foreground">PNG, JPG, WebP · Up to 10MB per image</p>
                 </div>
               </div>
             </div>

@@ -48,7 +48,7 @@ export function AutoScoring() {
               <div className="rounded-xl border border-border/50 bg-card p-6">
                 <div className="mb-2 flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-emerald-400/80">Live demo</span>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-emerald-400/80">Example</span>
                 </div>
                 <p className="mb-3 text-sm text-muted-foreground">What is the capital of France?</p>
                 <div className="rounded-lg border border-border/50 bg-background p-3">

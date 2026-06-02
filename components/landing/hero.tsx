@@ -73,7 +73,7 @@ export function Hero() {
             href="#download"
             className="rounded-full border border-white/15 bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90"
           >
-            Download App
+            Coming soon on Android
           </a>
         </div>
       </header>
@@ -100,7 +100,7 @@ export function Hero() {
               href="#get-started"
               className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-white/90"
             >
-              Download App
+              Coming soon on Android
             </a>
             {/* <a
               href="#how-it-works"

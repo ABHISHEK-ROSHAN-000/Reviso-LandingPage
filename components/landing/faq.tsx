@@ -6,11 +6,11 @@ import { ChevronDown } from "lucide-react"
 const items = [
   {
     q: "What is Reviso?",
-    a: "Reviso is an AI-powered flashcard learning app that turns your notes, PDFs, and images into smart flashcards. It uses spaced repetition to help you retain information longer and study more efficiently.",
+    a: "Reviso is an AI-powered flashcard learning app that turns your notes and images into smart flashcards. It uses spaced repetition to help you retain information longer and study more efficiently.",
   },
   {
     q: "Is Reviso free?",
-    a: "Yes! Reviso is completely free. You get 100 credits every day that refresh after 24 hours, full spaced repetition system, and web & mobile access. The free plan includes ads.",
+    a: "Yes! Reviso is completely free. You get 100 credits every day that refresh after 24 hours, full spaced repetition system, and Android & iOS access. The free plan includes ads.",
   },
   {
     q: "How does spaced repetition work?",
@@ -22,15 +22,15 @@ const items = [
   },
   {
     q: "What happens to my data?",
-    a: "Your study data is stored locally on your device by default. You can optionally sign in with Google to sync across devices. We never sell your data or use your study content to train AI models.",
+    a: "Your study data is stored locally on your device by default. You can sign in with Google to save your credit balance and ad-free status to your account. We never sell your data or use your study content to train AI models.",
   },
   {
     q: "Does Reviso work offline?",
-    a: "Core review functionality works offline. AI features like card generation and answer scoring require an internet connection. Your study progress syncs when you reconnect.",
+    a: "Core review functionality works offline. AI features like card generation and answer scoring require an internet connection. Your study data is stored on your device.",
   },
   {
     q: "What platforms are supported?",
-    a: "Reviso is available on iOS, Android, and Web. Your progress syncs seamlessly across all platforms when signed in.",
+    a: "Reviso is available on Android and iOS.",
   },
   {
     q: "How does Reviso generate flashcards from images?",
@@ -42,7 +42,7 @@ const items = [
   },
   {
     q: "What makes Reviso different from other flashcard apps?",
-    a: "Unlike traditional flashcard apps, Reviso uses AI to auto-generate cards from your study materials and auto-score your written answers. It combines an Anki-compatible spaced repetition algorithm with modern features like image scanning, progress heatmaps, daily goal tracking, and cross-platform sync — all in one app.",
+    a: "Unlike traditional flashcard apps, Reviso uses AI to auto-generate cards from your study materials and auto-score your written answers. It combines an Anki-compatible spaced repetition algorithm with modern features like image scanning, progress heatmaps, daily goal tracking — all in one app.",
   },
 ]
 

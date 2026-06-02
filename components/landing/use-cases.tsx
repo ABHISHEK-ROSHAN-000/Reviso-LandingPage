@@ -5,29 +5,21 @@ const cases = [
     icon: Stethoscope,
     title: "For Med Students",
     desc: "Memorize anatomy, pharmacology, and clinical guidelines with AI flashcards. Turn lecture slides into review decks in seconds.",
-    stat: "3.2x",
-    statLabel: "faster anatomy recall",
   },
   {
     icon: Languages,
     title: "For Language Learners",
     desc: "Build vocabulary decks from any text. Spaced repetition ensures words stick. AI scoring checks your written translations.",
-    stat: "2.8x",
-    statLabel: "vocabulary retention",
   },
   {
     icon: GraduationCap,
     title: "For Exam Prep",
     desc: "Bar exam, MCAT, GRE, SAT — turn practice questions into flashcards. AI identifies your weak areas and focuses your review.",
-    stat: "91%",
-    statLabel: "pass rate among active users",
   },
   {
     icon: Briefcase,
     title: "For Professionals",
-    desc: "Certifications, continuing education, or learning new skills. Import PDFs and generate cards for any professional material.",
-    stat: "2.5x",
-    statLabel: "faster certification prep",
+    desc: "Certifications, continuing education, or learning new skills. Import and generate cards for any professional material.",
   },
 ]
 
@@ -57,10 +49,6 @@ export function UseCases() {
               <div>
                 <h3 className="text-lg font-semibold tracking-[-0.02em]">{c.title}</h3>
                 <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
-              </div>
-              <div className="flex items-baseline gap-1.5 border-t border-border/50 pt-5">
-                <span className="text-2xl font-semibold tracking-[-0.04em]">{c.stat}</span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground">{c.statLabel}</span>
               </div>
             </div>
           ))}

@@ -32,7 +32,7 @@ export function Footer() {
             </Link>
             <span className="hidden h-8 w-px bg-border/50 md:block" />
             <p className="hidden max-w-xs text-sm leading-relaxed text-muted-foreground md:block">
-              Turn notes, PDFs, and images into smart flashcards.
+              Turn notes and images into smart flashcards.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-border/50 pt-8 font-mono text-[10px] uppercase tracking-[0.25em] text-foreground/50 md:flex-row md:items-center">
-          <span>© 2026 Reviso Labs, Inc.</span>
+          <span>© 2026 Reviso</span>
           <div className="flex gap-6">
             <Link href="/privacy.html" className="hover:text-foreground">Privacy</Link>
             {/* <Link href="#" className="hover:text-foreground">Terms</Link> */}

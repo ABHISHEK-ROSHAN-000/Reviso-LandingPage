@@ -14,6 +14,14 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  async rewrites() {
+    return [
+      {
+        source: '/privacy',
+        destination: '/privacy.html',
+      },
+    ];
+  },
 };
 
 export default nextConfig;

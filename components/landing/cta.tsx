@@ -15,8 +15,8 @@ export function CTA() {
         </h2>
 
         <div className="mt-14 flex flex-col gap-6 sm:flex-row">
-          <a href="#" className="group flex items-center gap-3 border-b border-foreground/40 pb-1.5 font-mono text-xs uppercase tracking-[0.25em] text-foreground transition-colors hover:border-foreground">
-            <span>Get Reviso free</span>
+          <a href="#download" className="group flex items-center gap-3 border-b border-foreground/40 pb-1.5 font-mono text-xs uppercase tracking-[0.25em] text-foreground transition-colors hover:border-foreground">
+            <span>Coming soon on Android</span>
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </a>
 
