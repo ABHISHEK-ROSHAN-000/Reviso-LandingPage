@@ -48,8 +48,8 @@ export function Footer() {
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-border/50 pt-8 font-mono text-[10px] uppercase tracking-[0.25em] text-foreground/50 md:flex-row md:items-center">
           <span>© 2026 Reviso Labs, Inc.</span>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-foreground">Privacy</Link>
-            <Link href="#" className="hover:text-foreground">Terms</Link>
+            <Link href="/privacy.html" className="hover:text-foreground">Privacy</Link>
+            {/* <Link href="#" className="hover:text-foreground">Terms</Link> */}
           </div>
         </div>
       </div>
