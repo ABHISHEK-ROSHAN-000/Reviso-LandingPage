@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviso — Delete Account</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #222;
+      background: #fafafa;
+      line-height: 1.75;
+      font-size: clamp(15px, 1.05vw + 12px, 18px);
+      padding: 0.5rem;
+    }
+    .container {
+      max-width: 780px;
+      margin: clamp(0.5rem, 2vw, 2rem) auto;
+      background: #fff;
+      padding: clamp(1.25rem, 3vw, 2.5rem) clamp(1rem, 3vw, 2rem);
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: #000;
+      line-height: 1.2;
+    }
+    .last-updated {
+      float: right;
+      font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+      color: #666;
+      background: #f4f4f4;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      margin-top: 0.3rem;
+      white-space: nowrap;
+    }
+    .subtitle {
+      clear: both;
+      color: #555;
+      font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 1rem;
+      word-break: break-word;
+    }
+    p { margin-bottom: 0.6rem; }
+    ol {
+      padding-left: clamp(1rem, 3vw, 1.5rem);
+      margin-bottom: 1rem;
+    }
+    li { margin-bottom: 0.6rem; }
+    a {
+      color: #1a5bb5;
+      word-break: break-all;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+    strong { color: #000; }
+    .footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+      font-size: 0.85rem;
+      color: #888;
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      body { padding: 0; }
+      .container { margin: 0; border-radius: 0; box-shadow: none; }
+      .last-updated { float: none; display: inline-block; margin-bottom: 0.5rem; }
+    }
+    @media (min-width: 641px) and (max-width: 860px) {
+      .container { margin: 1rem; }
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .container { box-shadow: none; margin: 0; max-width: none; }
+      a { color: #222; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+<h1>Account Deletion</h1>
+<span class="last-updated">Last updated: June 2, 2026</span>
+<p class="subtitle">
+  Contact: studywithreviso@gmail.com
+</p>
+
+<p>To request deletion of your Reviso account and all associated data:</p>
+
+<ol>
+  <li>Email <strong>studywithreviso@gmail.com</strong> with the subject line <strong>"Account Deletion Request"</strong>.</li>
+  <li>Include the email address linked to your Reviso account in the body of the email.</li>
+</ol>
+
+<p>Once we receive your request, we will delete the following within <strong>30 days</strong>:</p>
+
+<ul>
+  <li>Your Firebase Auth record</li>
+  <li>Your Firestore credit data</li>
+  <li>Any other backend-stored data associated with your account</li>
+</ul>
+
+<p><strong>Locally stored data</strong> (flashcards, decks, review history, app preferences, and any cached content) is stored only on your device. This data is <strong>automatically removed when you uninstall the Reviso app</strong>. No further action is needed from you to remove local data.</p>
+
+<div class="footer">
+  &copy; 2026 Reviso. All rights reserved.
+</div>
+
+</div>
+</body>
+</html>
