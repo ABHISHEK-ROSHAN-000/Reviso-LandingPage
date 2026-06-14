@@ -195,7 +195,7 @@
   <li>The reference answer (back side) of the flashcard</li>
   <li>The answer you typed</li>
 </ul>
-<p><strong>Important:</strong> Your study content — including card text, answers, and images — is sent to our AI provider (NVIDIA NIM / OpenRouter) only for the purpose of generating scores or creating flashcards. <strong>We do not use your content to train or improve AI models.</strong> Our AI service providers process this data temporarily for the sole purpose of generating a response and do not retain it for model training.</p>
+<p><strong>Important:</strong> Your study content — including card text, answers, and images — is sent to our AI provider (NVIDIA NIM / OpenRouter) only for the purpose of generating scores or creating flashcards. <strong>We do not use your content to train or improve AI models.</strong> Each AI provider's data handling practices are governed by their own privacy policy (see Section 4). We recommend that you do not include sensitive personal information in your flashcard content.</p>
 
 <p><strong>Flashcard generation from images.</strong> If you use the image-to-flashcard feature, the image you select is encoded as base64 data and sent to our backend and then to the AI provider (NVIDIA NIM / OpenRouter). No image data is permanently stored by us — it is used only to generate the flashcard content and is then discarded.</p>
 
@@ -207,6 +207,7 @@
   <li>First-launch flag (to show onboarding)</li>
   <li>Cached study streak count</li>
 </ul>
+<p><strong>Note:</strong> School name, daily goal, and reminder preferences are synced to Cloud Firestore so they persist across devices. You can update or clear them at any time in Profile.</p>
 
 <h3>2.3 Information collected by third-party SDKs</h3>
 
@@ -223,7 +224,7 @@
 <ul>
   <li>Instance ID (a unique identifier for your app installation)</li>
   <li>Operating system version and device model</li>
-  <li>App version and crash diagnostics (if crashes occur)</li>
+   <li>App version</li>
 </ul>
 <p>Firebase data is processed by Google in accordance with <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy documentation</a>.</p>
 
@@ -237,9 +238,9 @@
 
 <ul>
   <li><strong>To provide the core study experience.</strong> Your flashcards, decks, and study data are stored locally on your device so you can review cards, track your progress, and schedule future reviews using the spaced-repetition algorithm.</li>
-   <li><strong>To enable AI answer scoring.</strong> When you request an AI evaluation of your answer, your card's question, reference answer, and your typed answer are sent to our backend and then to one of our AI service providers (NVIDIA NIM or OpenRouter). The score is returned to you and displayed within the App. This text is <strong>never used to train AI models</strong> and is not permanently stored by us or the AI provider beyond the duration of the request.</li>
+   <li><strong>To enable AI answer scoring.</strong> When you request an AI evaluation of your answer, your card's question, reference answer, and your typed answer are sent to our backend and then to one of our AI service providers (NVIDIA NIM or OpenRouter). The score is returned to you and displayed within the App. This text is <strong>not permanently stored by us beyond the duration of the request</strong>. AI providers may process data according to their own policies (see Section 4).</li>
   <li><strong>To generate flashcards from images.</strong> When you use the image-to-card feature, your image is temporarily processed by the AI service to create flashcard content. The image is not stored permanently.</li>
-  <li><strong>To manage the credit system.</strong> Your credit balance is stored securely on our Firebase backend. Credits are consumed when you use AI features and can be replenished by watching rewarded ads.</li>
+  <li><strong>To manage the credit system.</strong> Your credit balance is stored securely on our backend server. Credits are consumed when you use AI features and can be replenished by watching rewarded ads.</li>
   <li><strong>To process ad rewards.</strong> When you voluntarily choose to watch a rewarded ad, your account is credited with in-app credits after the ad completes successfully.</li>
   <li><strong>To schedule study reminders.</strong> Your notification preferences (time, frequency, daily goal) are stored locally to send you local push notifications as requested.</li>
   <li><strong>To authenticate your account.</strong> Your Firebase authentication data is used to verify your identity when communicating with our backend server.</li>
@@ -265,8 +266,8 @@
   <tbody>
     <tr>
       <td>Google Firebase (Firebase Auth, Cloud Firestore)</td>
-      <td>Email address, display name, profile photo URL, Firebase UID; Firestore document reads (whitelist check); credit balance and reward timestamps</td>
-      <td>User authentication, account management, credit system, whitelist-based ad-free access</td>
+      <td>Email address, display name, profile photo URL, Firebase UID; user settings (school name, daily goal, reminder preferences)</td>
+      <td>User authentication, account management, credit system</td>
       <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
     </tr>
     <tr>
@@ -328,7 +329,7 @@
 <p><strong>Where your data is stored:</strong></p>
 <ul>
   <li><strong>On your device (local storage):</strong> Most of your study data — flashcards, decks, review history, daily statistics, and app preferences — is stored locally on your device in a SQLite database (<code>flashlearn.db</code>) and in SharedPreferences. Profile images are saved to your device's application documents directory. This data never leaves your device unless you explicitly use a feature that transmits it (such as AI scoring).</li>
-  <li><strong>On Firebase servers:</strong> Your credit balance and reward claim timestamps are stored in Cloud Firestore (Google Cloud servers, which may be located outside India). Your Firebase authentication credentials are managed by Google's Firebase Auth service.</li>
+  <li><strong>On Firebase servers:</strong> Your Firebase authentication credentials are managed by Google's Firebase Auth service. User settings (school name, daily goal, reminder preferences) are synced to Cloud Firestore.</li>
   <li><strong>On our backend server (Railway):</strong> The backend server processes AI scoring requests and manages the credit system. It does not permanently store your flashcard content, answers, or images — it passes data to the AI provider (NVIDIA NIM or OpenRouter) and returns the result.</li>
 </ul>
 
@@ -346,7 +347,7 @@
 <h2>7. Data Retention</h2>
 <!-- ============================================================ -->
 
-<p><strong>Credit data.</strong> Your credit balance and reward claim history in Firestore are retained while your account remains active. Credits are automatically refreshed every 24 hours. There is no automatic deletion of credit records.</p>
+<p><strong>Credit data.</strong> Your credit balance, managed by our backend server, is retained while your account remains active. Credits are refreshed on a schedule determined by the server (typically every 24 hours). There is no automatic deletion of credit records.</p>
 
 <p><strong>Study and flashcard data.</strong> Your flashcards, decks, review history, and daily statistics are stored locally on your device. This data is retained until you manually delete individual items (decks, cards) or uninstall the App.</p>
 
