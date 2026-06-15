@@ -24,6 +24,10 @@ const nextConfig: NextConfig = {
         source: '/terms',
         destination: '/terms.html',
       },
+      {
+        source: '/delete-account',
+        destination: '/delete-account.html',
+      },
     ];
   },
 };
