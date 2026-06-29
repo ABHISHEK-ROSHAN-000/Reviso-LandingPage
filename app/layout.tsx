@@ -6,7 +6,7 @@ const geist = Geist({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
 const instrumentSerif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"] })
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://abhishek-roshan-000.github.io/Reviso-landingPage'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://studywithreviso.in'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: 'Master any subject with AI-generated flashcards and intelligent review sessions. Study smarter, not harder.',
     images: [
       {
-        url: '/Reviso-landingPage/reviso-homescreen-mockup-og.png',
+        url: '/reviso-homescreen-mockup-og.png',
         width: 1200,
         height: 630,
         alt: 'Reviso AI Flashcard App Interface',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Reviso - AI-Powered Flashcard Learning App',
     description: 'Master any subject with AI-generated flashcards and intelligent review sessions.',
-    images: ['/Reviso-landingPage/reviso-homescreen-mockup-og.png'],
+    images: ['/reviso-homescreen-mockup-og.png'],
   },
   robots: {
     index: true,
@@ -63,8 +63,8 @@ export const metadata: Metadata = {
   },
   category: 'Education',
   icons: {
-    icon: '/Reviso-landingPage/Logo%201%20r%201.png',
-    apple: '/Reviso-landingPage/Logo%201%20r%201.png',
+    icon: '/Logo%201%20r%201.png',
+    apple: '/Logo%201%20r%201.png',
   },
 }
 

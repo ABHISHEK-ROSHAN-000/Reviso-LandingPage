@@ -16,14 +16,14 @@ export function Footer() {
           <div className="flex items-center gap-5">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/Reviso-landingPage/Logo.png"
+                src="/Logo.png"
                 alt="Reviso AI flashcard study app logo"
                 width={80}
                 height={32}
                 className="block h-8 w-auto sm:h-10 select-none"
               />
               <Image
-                src="/Reviso-landingPage/Branding.png"
+                src="/Branding.png"
                 alt="Reviso AI-powered flashcard learning app"
                 width={120}
                 height={24}

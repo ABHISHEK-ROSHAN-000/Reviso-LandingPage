@@ -13,7 +13,7 @@ import { FAQ } from "@/components/landing/faq";
 import { CTA } from "@/components/landing/cta";
 import { Footer } from "@/components/landing/footer";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://abhishek-roshan-000.github.io/Reviso-landingPage'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://studywithreviso.in'
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -42,7 +42,7 @@ const jsonLd = {
         "priceCurrency": "USD"
       },
       "screenshot": [
-        { "@type": "ImageObject", "url": `${SITE_URL}/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png` }
+        { "@type": "ImageObject", "url": `${SITE_URL}/reviso-homescreen-mockup-half-trans.png` }
       ],
       "featureList": "AI flashcard generation, spaced repetition, progress analytics, adaptive review, image-to-cards, AI answer scoring",
       "aggregateRating": {
@@ -63,7 +63,7 @@ const jsonLd = {
       "url": SITE_URL,
       "logo": {
         "@type": "ImageObject",
-        "url": `${SITE_URL}/Reviso-landingPage/Logo.png`
+        "url": `${SITE_URL}/Logo.png`
       },
       "sameAs": []
     },

@@ -35,8 +35,7 @@ export function Hero() {
 
         <div className="flex items-center gap-3 text-sm font-medium tracking-[-0.02em] text-white/92">
           <Image
-            src="/Reviso-landingPage/Logo.png"
-            // src="/Logo.png"
+            src="/Logo.png"
             alt="Reviso AI flashcard study app logo"
             width={80}
             height={32}
@@ -44,8 +43,7 @@ export function Hero() {
             priority
           />
           <Image
-            src="/Reviso-landingPage/Branding.png"
-            // src="/Branding.png"
+            src="/Branding.png"
             alt="Reviso AI-powered flashcard learning app branding"
             width={120}
             height={24}
@@ -163,8 +161,7 @@ export function Hero() {
               <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
               <div className="relative overflow-hidden">
                 <Image
-                  src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
-                  // src="/reviso-homescreen-mockup-half-trans.png"
+                  src="/reviso-homescreen-mockup-half-trans.png"
                   alt="Reviso AI flashcard study app with smart learning features"
                   width={320}
                   height={640}
@@ -179,8 +176,7 @@ export function Hero() {
               <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
               <div className="relative overflow-hidden">
                 <Image
-                  src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
-                  // src="/reviso-homescreen-mockup-half-trans.png"
+                  src="/reviso-homescreen-mockup-half-trans.png"
                   alt="Reviso AI flashcard study dashboard with spaced repetition and progress tracking"
                   width={320}
                   height={640}
@@ -195,8 +191,7 @@ export function Hero() {
               <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
               <div className="relative overflow-hidden">
                 <Image
-                  src="/Reviso-landingPage/reviso-homescreen-mockup-half-trans.png"
-                  // src="/reviso-homescreen-mockup-half-trans.png"
+                  src="/reviso-homescreen-mockup-half-trans.png"
                   alt="Reviso AI study dashboard for flashcard review and progress tracking"
                   width={320}
                   height={640}

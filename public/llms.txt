@@ -20,4 +20,4 @@ Reviso is an AI-powered flashcard study app that generates flashcards from notes
 - Professional certifications and continuing education
 
 ## Links
-- Website: https://abhishek-roshan-000.github.io/Reviso-landingPage
+- Website: https://studywithreviso.in
