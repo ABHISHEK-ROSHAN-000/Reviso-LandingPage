@@ -88,27 +88,52 @@
 <div class="container">
 
 <h1>Account Deletion</h1>
-<span class="last-updated">Last updated: June 2, 2026</span>
+<span class="last-updated">Last updated: June 26, 2026</span>
 <p class="subtitle">
   Contact: studywithreviso@gmail.com
 </p>
 
-<p>To request deletion of your Reviso account and all associated data:</p>
+<h2>Delete from within the App (Recommended)</h2>
+
+<p>The easiest way to delete your account is directly from the App:</p>
+
+<ol>
+  <li>Open Reviso and go to the <strong>Profile</strong> page.</li>
+  <li>Scroll to the bottom and tap <strong>Delete Account</strong>.</li>
+  <li>Confirm through the two-step dialog.</li>
+  <li>You will be asked to sign in with Google once more to verify your identity before deletion proceeds.</li>
+</ol>
+
+<p>Once confirmed, the following is deleted <strong>immediately and permanently</strong>:</p>
+
+<ul>
+  <li>Your Firebase Auth record (your account is removed)</li>
+  <li>Your Firestore data (user settings, credit records, and whitelist status)</li>
+  <li>All flashcards, decks, and review history stored locally on your device</li>
+  <li>All app preferences and cached data stored on your device</li>
+  <li>Your locally saved profile image</li>
+</ul>
+
+<p><strong>Firebase Analytics data</strong> linked to your account is submitted to Google for deletion. Google may take up to 180 days to fully remove this data from their systems.</p>
+
+<h2>Residual Server Data</h2>
+
+<p>Our backend server (hosted on Railway) stores credit records that are not yet automatically removed by the in-app deletion button. To ensure these records are also removed, please also email us using the instructions below.</p>
+
+<h2>Delete by Email (Alternative or for Server Data Removal)</h2>
+
+<p>If you are unable to access the app, or if you want to ensure all server-side credit records are removed:</p>
 
 <ol>
   <li>Email <strong>studywithreviso@gmail.com</strong> with the subject line <strong>"Account Deletion Request"</strong>.</li>
-  <li>Include the email address linked to your Reviso account in the body of the email.</li>
+  <li>Include the email address linked to your Reviso account.</li>
 </ol>
 
-<p>Once we receive your request, we will delete the following within <strong>30 days</strong>:</p>
+<p>We will manually process your request within <strong>30 days</strong> and confirm once complete.</p>
 
-<ul>
-  <li>Your Firebase Auth record</li>
-  <li>Your Firestore credit data</li>
-  <li>Any other backend-stored data associated with your account</li>
-</ul>
+<h2>Locally Stored Data</h2>
 
-<p><strong>Locally stored data</strong> (flashcards, decks, review history, app preferences, and any cached content) is stored only on your device. This data is <strong>automatically removed when you uninstall the Reviso app</strong>. No further action is needed from you to remove local data.</p>
+<p>Flashcards, decks, review history, and app preferences are stored only on your device. This data is automatically removed when you delete your account using the in-app button, or when you uninstall the App. No further action is needed to remove local data.</p>
 
 <div class="footer">
   &copy; 2026 Reviso. All rights reserved.

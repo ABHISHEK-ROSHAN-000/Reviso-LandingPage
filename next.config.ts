@@ -4,7 +4,7 @@ const isDev = process.env.NODE_ENV === "development";
 
 const nextConfig: NextConfig = {
   output: isDev ? undefined : 'export',
-  basePath: isDev ? undefined : "/Reviso-landingPage",
+  basePath: isDev ? undefined : "",
   assetPrefix: isDev ? undefined : "/Reviso-landingPage",
   images: {
     unoptimized: true,

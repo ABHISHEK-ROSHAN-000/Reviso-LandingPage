@@ -139,7 +139,7 @@
 <div class="container">
 
 <h1>Reviso Privacy Policy</h1>
-<span class="last-updated">Last updated: June 14, 2026</span>
+<span class="last-updated">Last updated: June 26, 2026</span>
 <p class="subtitle">
   Contact: <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span><br>
   Website: <a href="https://abhishek-roshan-000.github.io/Reviso-landingPage/privacy" target="_blank" rel="noopener"><!-- FILL IN: verify this URL is live -->https://abhishek-roshan-000.github.io/Reviso-landingPage/privacy</a>
@@ -220,11 +220,16 @@
 </ul>
 <p>This data is collected and processed by Google in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
 
-<p><strong>Firebase SDKs.</strong> The App integrates Firebase Core, Firebase Authentication, and Cloud Firestore. These SDKs automatically collect:</p>
+<p><strong>Firebase SDKs.</strong> The App integrates Firebase Core, Firebase Authentication, Cloud Firestore, and Firebase Analytics. These SDKs automatically collect:</p>
 <ul>
   <li>Instance ID (a unique identifier for your app installation)</li>
   <li>Operating system version and device model</li>
    <li>App version</li>
+  <li>In-app usage events, including: review sessions started and completed, card ratings, onboarding steps completed, streak milestones, daily goal completions, ad interactions (rewarded and interstitial), and AI scoring usage</li>
+  <li>Screen navigation history within the App (screen names and transitions)</li>
+  <li>Session duration and engagement metrics</li>
+  <li>Country or region (derived from IP address at the time of collection; the IP address itself is not stored by Google)</li>
+  <li>Your Firebase user ID (linked to your account after you sign in, so that usage events can be associated with your account)</li>
 </ul>
 <p>Firebase data is processed by Google in accordance with <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy documentation</a>.</p>
 
@@ -245,7 +250,7 @@
   <li><strong>To schedule study reminders.</strong> Your notification preferences (time, frequency, daily goal) are stored locally to send you local push notifications as requested.</li>
   <li><strong>To authenticate your account.</strong> Your Firebase authentication data is used to verify your identity when communicating with our backend server.</li>
   <li><strong>To show advertisements.</strong> AdMob uses your device advertising ID and app usage signals to serve relevant advertisements within the App.</li>
-  <li><strong>To improve app performance and fix bugs.</strong> Aggregated, non-personal usage patterns may be reviewed to improve the App's functionality.</li>
+  <li><strong>To measure feature usage and improve the App.</strong> Firebase Analytics tracks in-app events (such as review sessions, onboarding completion, card ratings, streak milestones, and ad interactions) linked to your Firebase user ID after sign-in. This data is processed by Google and used to understand how users engage with the App and where improvements can be made.</li>
 </ul>
 
 <!-- ============================================================ -->
@@ -268,6 +273,12 @@
       <td>Google Firebase (Firebase Auth, Cloud Firestore)</td>
       <td>Email address, display name, profile photo URL, Firebase UID; user settings (school name, daily goal, reminder preferences)</td>
       <td>User authentication, account management, credit system</td>
+      <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Google Firebase Analytics</td>
+      <td>Firebase user ID, app instance ID, device model, OS version, country/region, screen views, and in-app events (review sessions, onboarding steps, card ratings, streak milestones, ad interactions)</td>
+      <td>App usage measurement and product improvement</td>
       <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
     </tr>
     <tr>
@@ -351,7 +362,17 @@
 
 <p><strong>Study and flashcard data.</strong> Your flashcards, decks, review history, and daily statistics are stored locally on your device. This data is retained until you manually delete individual items (decks, cards) or uninstall the App.</p>
 
-<p><strong>Account data.</strong> The App currently does not offer an in-app "delete account" feature. If you wish to have your account and associated data deleted, please contact us at <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span>. We will process your deletion request within 30 days. Deletion will remove your Firebase Auth record, your Firestore credit data, and any other backend-stored data associated with your account.</p>
+<p><strong>Account data.</strong> You can delete your account at any time directly from the Profile page using the Delete Account button. When you initiate deletion, the following data is permanently removed immediately:</p>
+
+<ul>
+  <li>Your Firebase Auth record</li>
+  <li>Your Firestore data (user settings, credit records, and whitelist status)</li>
+  <li>All locally stored data on your device (SQLite database, SharedPreferences, and profile image)</li>
+</ul>
+
+<p>Firebase Analytics usage data linked to your Firebase user ID is submitted to Google for deletion. Google may take up to 180 days to fully remove this data from all systems.</p>
+
+<p>Residual server data: Our backend server (hosted on Railway) stores credit records that are not yet automatically removed by the in-app deletion flow. If you want to ensure these server-side records are also removed, please email <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span> with the subject line 'Account Deletion Request' and your account email address. We will manually process this within 30 days.</p>
 
 <p><strong>Local data on uninstall.</strong> When you uninstall the App, all locally stored data (SQLite database, SharedPreferences, profile images) is automatically removed from your device. Data stored on our backend (Firebase credits, auth records) is not automatically deleted on uninstall — you must request deletion as described above.</p>
 
@@ -364,7 +385,7 @@
 <ul>
   <li><strong>Right to access:</strong> You may request a copy of the personal data we hold about you by contacting us.</li>
   <li><strong>Right to rectification:</strong> You may correct inaccurate data. Most of your data can be edited directly within the App (e.g., flashcard content, deck names, profile information).</li>
-  <li><strong>Right to deletion ("right to be forgotten"):</strong> You may request deletion of your account and associated data by emailing us at <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span>. We will process your request within 30 days.</li>
+  <li><strong>Right to deletion ("right to be forgotten"):</strong> You can delete your account at any time from the Profile page using the Delete Account button. This immediately removes your Firebase account, Firestore data, and all locally stored data. Alternatively, you may email <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span> to request manual deletion, which we will process within 30 days.</li>
   <li><strong>Right to opt out of personalized advertising:</strong> You can disable personalized ads through your device settings as described in Section 5 above.</li>
   <li><strong>Right to withdraw consent:</strong> If you have consented to a data-processing activity, you may withdraw your consent at any time. Please note that withdrawing consent for data processing that is essential to the App's functionality may prevent you from using certain features.</li>
 </ul>
