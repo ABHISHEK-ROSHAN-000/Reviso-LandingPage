@@ -68,10 +68,12 @@ export function Hero() {
 
 
           <a
-            href="#download"
+            href="https://play.google.com/store/apps/details?id=com.reviso.app"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full border border-white/15 bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90"
           >
-            Coming soon on Android
+            Available on Play Store
           </a>
         </div>
       </header>
@@ -95,10 +97,17 @@ export function Hero() {
 
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="#get-started"
-              className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-white/90"
+              href="https://play.google.com/store/apps/details?id=com.reviso.app"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Coming soon on Android
+              <Image
+                src="/google-play-badge.png"
+                alt="Get it on Google Play"
+                width={330}
+                height={100}
+                className="h-20 w-auto"
+              />
             </a>
             {/* <a
               href="#how-it-works"
@@ -161,7 +170,7 @@ export function Hero() {
               <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
               <div className="relative overflow-hidden">
                 <Image
-                  src="/reviso-homescreen-mockup-half-trans.png"
+                  src="/reviso-homescreen-mockup-half-trans-2.png"
                   alt="Reviso AI flashcard study app with smart learning features"
                   width={320}
                   height={640}
@@ -191,7 +200,7 @@ export function Hero() {
               <div className="absolute inset-0 translate-y-6 rounded-[3rem] bg-black/55 blur-2xl" />
               <div className="relative overflow-hidden">
                 <Image
-                  src="/reviso-homescreen-mockup-half-trans.png"
+                  src="/reviso-homescreen-mockup-half-trans-3.png"
                   alt="Reviso AI study dashboard for flashcard review and progress tracking"
                   width={320}
                   height={640}
