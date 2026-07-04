@@ -1,7 +1,7 @@
 import { Check } from "lucide-react"
 
 const tiers = [
-  { num: "01", name: "Free", price: "$0", cadence: "forever", desc: "Start learning with AI flashcards for free. Everything you need to begin studying smarter.", features: ["100 credits / day", "Refreshes every 24hrs", "Spaced repetition system", "Contains ads"], cta: "Coming soon on Android" },
+  { num: "01", name: "Free", price: "$0", cadence: "forever", desc: "Start learning with AI flashcards for free. Everything you need to begin studying smarter.", features: ["50 credits / day", "Refreshes every 24hrs", "Spaced repetition system", "Contains ads"], cta: "Start free on Android" },
 ]
 
 export function Pricing() {
@@ -44,7 +44,7 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <a href="#download" className="group mt-auto flex items-center gap-3 border-b border-foreground/30 pb-1.5 font-mono text-[11px] uppercase tracking-[0.25em] text-foreground transition-colors hover:border-foreground">
+              <a href="https://play.google.com/store/apps/details?id=com.reviso.app" target="_blank" rel="noopener noreferrer" className="group mt-auto flex items-center gap-3 border-b border-foreground/30 pb-1.5 font-mono text-[11px] uppercase tracking-[0.25em] text-foreground transition-colors hover:border-foreground">
                 <span>{t.cta}</span>
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>

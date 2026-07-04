@@ -84,7 +84,7 @@ const jsonLd = {
           "name": "Is Reviso free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes! Reviso is completely free. You get 100 credits every day that refresh after 24 hours, full spaced repetition system, and Android & iOS access. The free plan includes ads."
+            "text": "Yes! Reviso is completely free. You get 50 credits every day that refresh after 24 hours, full spaced repetition system, and Android & iOS access. The free plan includes ads."
           }
         },
         {
