@@ -139,7 +139,7 @@
 <div class="container">
 
 <h1>Reviso Privacy Policy</h1>
-<span class="last-updated">Last updated: June 26, 2026</span>
+<span class="last-updated">Last updated: July 15, 2026</span>
 <p class="subtitle">
   Contact: <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span><br>
   Website: <a href="https://studywithreviso.in/privacy" target="_blank" rel="noopener">https://studywithreviso.in/privacy</a>
@@ -209,7 +209,19 @@
 </ul>
 <p><strong>Note:</strong> School name, daily goal, and reminder preferences are synced to Cloud Firestore so they persist across devices. You can update or clear them at any time in Profile.</p>
 
-<h3>2.3 Information collected by third-party SDKs</h3>
+<h3>2.3 Backup data (optional)</h3>
+
+<p><strong>Google Drive backup.</strong> If you choose to use the optional Google Drive backup feature (available in Profile → Backup &amp; Restore), the following data is uploaded from your device to a hidden, app-specific folder in your personal Google Drive account (the "appDataFolder") — it is not uploaded to Reviso's servers:</p>
+<ul>
+  <li>All your flashcard decks, chapters, and cards</li>
+  <li>Your full review history (revlog)</li>
+  <li>Daily study statistics</li>
+  <li>Sync-deletion records</li>
+  <li>App preferences (daily goal, school name)</li>
+</ul>
+<p>This backup is stored under your own Google account and is not accessible to Reviso. You control when backups are created or restored. Backups persist in your Drive until you delete them (even if you uninstall the app or delete your Reviso account). You can remove the backup file at any time via Profile → Backup &amp; Restore, or by managing your Google Drive app data.</p>
+
+<h3>2.4 Information collected by third-party SDKs</h3>
 
 <p><strong>Google AdMob.</strong> The App uses Google AdMob to serve advertisements. AdMob automatically collects:</p>
 <ul>
@@ -341,6 +353,7 @@
 <ul>
   <li><strong>On your device (local storage):</strong> Most of your study data — flashcards, decks, review history, daily statistics, and app preferences — is stored locally on your device in a SQLite database (<code>flashlearn.db</code>) and in SharedPreferences. Profile images are saved to your device's application documents directory. This data never leaves your device unless you explicitly use a feature that transmits it (such as AI scoring).</li>
   <li><strong>On Firebase servers:</strong> Your Firebase authentication credentials are managed by Google's Firebase Auth service. User settings (school name, daily goal, reminder preferences) are synced to Cloud Firestore.</li>
+  <li><strong>On your Google Drive (optional backup):</strong> When you use the optional backup feature, a gzipped JSON snapshot of your study data is uploaded to a hidden, app-specific folder in your personal Google Drive ("appDataFolder"). This data is stored under your Google account, not on Reviso's servers. You can delete it at any time.</li>
   <li><strong>On our backend server (Railway):</strong> The backend server processes AI scoring requests and manages the credit system. It does not permanently store your flashcard content, answers, or images — it passes data to the AI provider (NVIDIA NIM or OpenRouter) and returns the result.</li>
 </ul>
 
@@ -375,6 +388,8 @@
 <p>Residual server data: Our backend server (hosted on Railway) stores credit records that are not yet automatically removed by the in-app deletion flow. If you want to ensure these server-side records are also removed, please email <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span> with the subject line 'Account Deletion Request' and your account email address. We will manually process this within 30 days.</p>
 
 <p><strong>Local data on uninstall.</strong> When you uninstall the App, all locally stored data (SQLite database, SharedPreferences, profile images) is automatically removed from your device. Data stored on our backend (Firebase credits, auth records) is not automatically deleted on uninstall — you must request deletion as described above.</p>
+
+<p><strong>Backup copies in Google Drive.</strong> If you have created a backup using the optional Google Drive backup feature, a copy of your study data remains in your Google Drive appDataFolder even after you uninstall the app or delete your Reviso account. To remove this backup, either use Profile → Back up now (which overwrites it) and then delete it, or remove the app data directly through your Google Account settings (Google → Manage your data &amp; privacy → Third-party apps &amp; services → Reviso → Delete hidden app data).</p>
 
 <!-- ============================================================ -->
 <h2>8. Your Rights &amp; Choices</h2>
