@@ -1,38 +1,60 @@
 import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
+import Image from "next/image"
+
+const navLinks = [
+  { label: "NEET", href: "/for/neet-flashcards" },
+  { label: "JEE", href: "/for/jee-flashcards" },
+  { label: "UPSC", href: "/for/upsc-flashcards" },
+  { label: "Features", href: "/features" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Blog", href: "/blog" },
+]
 
 export function Header() {
   return (
-//     <header className="relative z-20 mx-auto flex w-full max-w-[1400px] items-center justify-between px-5 py-5 sm:px-8 lg:px-10 bg-transparent">
-//   <div className="flex items-center gap-3 text-sm font-medium tracking-[-0.02em] text-white/92">
-//     <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur-md">
-//       <span className="text-sm">◎</span>
-//     </div>
-//     <span className="uppercase tracking-[0.22em] text-white/90">Reviso</span>
-//   </div>
+    <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-5 py-3 sm:px-8 lg:px-10">
+        <Link href="/" className="flex items-center gap-3 shrink-0">
+          <Image
+            src="/Logo.png"
+            alt="Reviso AI flashcard study app logo"
+            width={80}
+            height={32}
+            className="block h-8 w-auto sm:h-10 select-none"
+            priority
+          />
+          <Image
+            src="/Branding.png"
+            alt="Reviso AI-powered flashcard learning app branding"
+            width={120}
+            height={24}
+            className="hidden sm:block h-3.5 w-auto select-none"
+            priority
+          />
+        </Link>
 
-//   <nav className="hidden items-center gap-10 text-[13px] text-white/70 md:flex">
-//     <a className="transition-colors hover:text-white" href="#products">Products</a>
-//     <a className="transition-colors hover:text-white" href="#solutions">Solutions</a>
-//     <a className="transition-colors hover:text-white" href="#pricing">Pricing</a>
-//   </nav>
+        <nav className="hidden md:flex items-center gap-6 text-sm text-foreground/70">
+          {navLinks.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="transition-colors hover:text-foreground"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </nav>
 
-//   <div className="flex items-center gap-3">
-//     <a
-//       href="#login"
-//       className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/85 backdrop-blur-md transition hover:bg-white/10"
-//     >
-//       Log in
-//     </a>
-
-//     <a
-//       href="#download"
-//       className="rounded-full border border-white/15 bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90"
-//     >
-//       Get Started
-//     </a>
-//   </div>
-// </header>
-<div></div>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.reviso.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full border border-white/15 bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90 shrink-0"
+        >
+          Download
+        </a>
+      </div>
+    </header>
   )
 }

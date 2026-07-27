@@ -1,11 +1,14 @@
 import Image from "next/image"
 import Link from "next/link"
 
-const links = [
-  { label: "Features", href: "#features" },
-
-  { label: "FAQ", href: "#faq" },
-  { label: "Download", href: "#download" },
+const mainLinks = [
+  { label: "NEET Flashcards", href: "/for/neet-flashcards" },
+  { label: "JEE Flashcards", href: "/for/jee-flashcards" },
+  { label: "UPSC Flashcards", href: "/for/upsc-flashcards" },
+  { label: "Features", href: "/features" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Blog", href: "/blog" },
 ]
 
 export function Footer() {
@@ -32,13 +35,13 @@ export function Footer() {
             </Link>
             <span className="hidden h-8 w-px bg-border/50 md:block" />
             <p className="hidden max-w-xs text-sm leading-relaxed text-muted-foreground md:block">
-              Turn notes and images into smart flashcards.
+              AI-powered flashcards for NEET, JEE, UPSC & more.
             </p>
           </div>
 
           <ul className="flex flex-wrap gap-x-8 gap-y-3">
-            {links.map((l) => (
-              <li key={l.label}>
+            {mainLinks.map((l) => (
+              <li key={l.href}>
                 <Link href={l.href} className="text-sm text-foreground/70 transition-colors hover:text-foreground">{l.label}</Link>
               </li>
             ))}

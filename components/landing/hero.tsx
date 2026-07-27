@@ -30,54 +30,6 @@ export function Hero() {
       {/* Small floating glow */}
       <div className="pointer-events-none absolute left-1/2 top-48 h-24 w-24 -translate-x-1/2 rounded-full bg-cyan-400/35 blur-2xl" />
 
-      <header className="relative z-20 mx-auto flex w-full max-w-[1400px] items-center justify-between px-5 py-5 sm:px-8 lg:px-10 bg-transparent">
-
-
-        <div className="flex items-center gap-3 text-sm font-medium tracking-[-0.02em] text-white/92">
-          <Image
-            src="/Logo.png"
-            alt="Reviso AI flashcard study app logo"
-            width={80}
-            height={32}
-            className="block h-8 w-auto sm:h-10 select-none"
-            priority
-          />
-          <Image
-            src="/Branding.png"
-            alt="Reviso AI-powered flashcard learning app branding"
-            width={120}
-            height={24}
-            className="block h-3.5 w-auto sm:h-5 select-none"
-            priority
-          />
-        </div>
-
-        {/* <nav className="hidden items-center gap-10 text-[13px] text-white/70 md:flex">
-    <a className="transition-colors hover:text-white" href="#products">Products</a>
-    <a className="transition-colors hover:text-white" href="#solutions">Solutions</a>
-    <a className="transition-colors hover:text-white" href="#pricing">Pricing</a>
-  </nav> */}
-
-        <div className="flex items-center gap-3 sm:flex">
-          {/* <a
-      href="#login"
-      className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/85 backdrop-blur-md transition hover:bg-white/10"
-    >
-      Log in
-    </a> */}
-
-
-          <a
-            href="https://play.google.com/store/apps/details?id=com.reviso.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-white/15 bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90"
-          >
-            Available on Play Store
-          </a>
-        </div>
-      </header>
-
       {/* Hero content */}
       <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col items-center px-5 pb-10 pt-15 sm:px-8 sm:pt-30 lg:px-10 lg:pb-14">
         <div className="max-w-5xl text-center">

@@ -10,7 +10,7 @@ const items = [
   },
   {
     q: "Is Reviso free?",
-    a: "Yes! Reviso is completely free. You get 50 credits every day that refresh after 24 hours, full spaced repetition system, and Android & iOS access. The free plan includes ads.",
+    a: "Yes! Reviso is completely free. You get 50 credits every day that refresh after 24 hours, full spaced repetition system, and Android access. The free plan includes ads.",
   },
   {
     q: "How does spaced repetition work?",
@@ -30,7 +30,7 @@ const items = [
   },
   {
     q: "What platforms are supported?",
-    a: "Reviso is available on Android and iOS.",
+    a: "Reviso is available on Android.",
   },
   {
     q: "How does Reviso generate flashcards from images?",

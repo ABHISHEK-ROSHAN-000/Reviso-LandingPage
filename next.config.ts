@@ -4,6 +4,7 @@ const isDev = process.env.NODE_ENV === "development";
 
 const nextConfig: NextConfig = {
   output: isDev ? undefined : 'export',
+  trailingSlash: true,
   basePath: isDev ? undefined : "",
   assetPrefix: isDev ? undefined : "",
   images: {
@@ -14,22 +15,7 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  async rewrites() {
-    return [
-      {
-        source: '/privacy',
-        destination: '/privacy.html',
-      },
-      {
-        source: '/terms',
-        destination: '/terms.html',
-      },
-      {
-        source: '/delete-account',
-        destination: '/delete-account.html',
-      },
-    ];
-  },
+  // static files /privacy.html, /terms.html, /delete-account.html served from /public
 };
 
 export default nextConfig;

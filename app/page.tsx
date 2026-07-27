@@ -1,4 +1,3 @@
-import { Header } from "@/components/landing/header";
 import { Hero } from "@/components/landing/hero";
 import { TrustBar } from "@/components/landing/trust-bar";
 import { Features } from "@/components/landing/features";
@@ -11,7 +10,6 @@ import { Testimonials } from "@/components/landing/testimonials";
 import { Pricing } from "@/components/landing/pricing";
 import { FAQ } from "@/components/landing/faq";
 import { CTA } from "@/components/landing/cta";
-import { Footer } from "@/components/landing/footer";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://studywithreviso.in'
 
@@ -35,7 +33,7 @@ const jsonLd = {
       "url": SITE_URL,
       "description": "AI-powered flashcard learning app that turns notes and images into smart study materials with spaced repetition and active recall.",
       "applicationCategory": "EducationalApplication",
-      "operatingSystem": "Android, iOS",
+      "operatingSystem": "Android",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -84,7 +82,7 @@ const jsonLd = {
           "name": "Is Reviso free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes! Reviso is completely free. You get 50 credits every day that refresh after 24 hours, full spaced repetition system, and Android & iOS access. The free plan includes ads."
+            "text": "Yes! Reviso is completely free. You get 50 credits every day that refresh after 24 hours, full spaced repetition system, and Android access. The free plan includes ads."
           }
         },
         {
@@ -124,7 +122,7 @@ const jsonLd = {
           "name": "What platforms are supported?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Reviso is available on Android and iOS."
+            "text": "Reviso is available on Android."
           }
         },
         {
@@ -163,7 +161,6 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Header />
       <Hero />
       <TrustBar />
       <Features />
@@ -176,7 +173,6 @@ export default function Home() {
       <Pricing />
       <FAQ />
       <CTA />
-      <Footer />
     </main>
   );
 }

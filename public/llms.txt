@@ -11,7 +11,7 @@ Reviso is an AI-powered flashcard study app that generates flashcards from notes
 - Study Progress Analytics with heatmaps and charts
 - Adaptive Review Sessions
 - Daily Goals and Reminders
-- Cross-platform (iOS, Android, Web)
+- Cross-platform (Android, Web)
 
 ## Use Cases
 - Medical students memorizing anatomy and pharmacology
