@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'Reviso Blog — Study Smarter with AI Flashcards',
     description: 'Study tips, flashcard guides, and exam prep strategies for Indian competitive exams.',
   },
+  alternates: {
+    canonical: '/blog/'
+  },
 }
 
 const posts = [

@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'What Is FSRS? Free Spaced Repetition Scheduler Explained',
     description: 'FSRS adapts to your individual memory. Learn how it works and why it beats SM-2.',
   },
+  alternates: {
+    canonical: '/blog/what-is-fsrs/'
+  },
 }
 
 export default function WhatIsFsrs() {

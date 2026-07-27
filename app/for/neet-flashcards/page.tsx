@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     title: 'NEET Flashcards App — AI-Generated from Your Own Notes',
     description: 'Turn NCERT photos into AI flashcards. Free spaced repetition for NEET UG prep.',
   },
+  alternates: {
+    canonical: '/for/neet-flashcards/'
+  },
 }
 
 const features = [

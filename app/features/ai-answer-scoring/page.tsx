@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: 'AI Answer Scoring — Auto-Graded Flashcard Review',
     description: 'Type your answer. AI scores it. The most defensible feature in the Reviso app.',
   },
+  alternates: {
+    canonical: '/features/ai-answer-scoring/'
+  },
 }
 
 export default function AiAnswerScoringPage() {

@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: 'Photo to Flashcards — Camera Scan to AI Cards',
     description: 'Photograph your notes and AI generates flashcards instantly. Free for students.',
   },
+  alternates: {
+    canonical: '/features/photo-to-flashcards/'
+  },
 }
 
 export default function PhotoToFlashcardsPage() {

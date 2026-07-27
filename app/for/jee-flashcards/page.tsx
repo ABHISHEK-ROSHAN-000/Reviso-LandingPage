@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'JEE Flashcards — AI-Generated Physics, Chemistry & Maths Formula Cards',
     description: 'Turn formula sheets into AI flashcards. Free spaced repetition for IIT-JEE prep.',
   },
+  alternates: {
+    canonical: '/for/jee-flashcards/'
+  },
 }
 
 export default function JeeFlashcardsPage() {

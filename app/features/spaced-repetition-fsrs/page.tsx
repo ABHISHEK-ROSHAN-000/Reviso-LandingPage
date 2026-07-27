@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: 'FSRS Flashcard App — Anki-Compatible Spaced Repetition',
     description: 'The same FSRS algorithm Anki uses, with AI-generated flashcards. Free.',
   },
+  alternates: {
+    canonical: '/features/spaced-repetition-fsrs/'
+  },
 }
 
 export default function SpacedRepetitionFsrsPage() {

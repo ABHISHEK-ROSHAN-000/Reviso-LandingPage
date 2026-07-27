@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: 'AI Flashcard Generator — Notes to Flashcards Free',
     description: 'Turn notes into AI flashcards instantly. Free for Indian competitive exam prep.',
   },
+  alternates: {
+    canonical: '/features/ai-flashcard-generator/'
+  },
 }
 
 export default function AiFlashcardGeneratorPage() {

@@ -1,4 +1,11 @@
+import type { Metadata } from 'next'
 import { Hero } from "@/components/landing/hero";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/'
+  },
+}
 import { TrustBar } from "@/components/landing/trust-bar";
 import { Features } from "@/components/landing/features";
 import { AutoScoring } from "@/components/landing/auto-scoring";

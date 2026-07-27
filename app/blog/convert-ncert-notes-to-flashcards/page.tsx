@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'Convert NCERT Notes to Flashcards — AI-Powered Guide',
     description: 'Turn NCERT textbook pages into AI flashcards. Photograph, generate, review.',
   },
+  alternates: {
+    canonical: '/blog/convert-ncert-notes-to-flashcards/'
+  },
 }
 
 export default function ConvertNcertNotesToFlashcards() {

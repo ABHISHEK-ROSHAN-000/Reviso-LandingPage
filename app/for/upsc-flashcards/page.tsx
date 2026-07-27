@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'UPSC Flashcards — Turn Your Notes & Current Affairs into AI Flashcards',
     description: 'Generate UPSC flashcards from current affairs and static GK. Free AI flashcard app.',
   },
+  alternates: {
+    canonical: '/for/upsc-flashcards/'
+  },
 }
 
 export default function UpscFlashcardsPage() {

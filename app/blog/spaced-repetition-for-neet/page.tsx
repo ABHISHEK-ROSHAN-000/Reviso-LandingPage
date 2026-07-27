@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'Spaced Repetition for NEET — The Ultimate Memory Strategy',
     description: 'How to use spaced repetition for NEET UG prep. Best subjects, scheduling tips, and FSRS.',
   },
+  alternates: {
+    canonical: '/blog/spaced-repetition-for-neet/'
+  },
 }
 
 const articleSchema = {

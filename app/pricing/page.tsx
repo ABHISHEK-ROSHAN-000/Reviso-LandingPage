@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'Pricing — Reviso Is Free',
     description: '50 free AI credits daily. No paid tier. No credit card.',
   },
+  alternates: {
+    canonical: '/pricing/'
+  },
 }
 
 export default function PricingPage() {

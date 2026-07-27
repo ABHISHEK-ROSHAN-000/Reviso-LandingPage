@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'Active Recall vs Spaced Repetition: What Is the Difference?',
     description: 'Learn how active recall and spaced repetition work together for better exam prep.',
   },
+  alternates: {
+    canonical: '/blog/active-recall-vs-spaced-repetition/'
+  },
 }
 
 const articleSchema = {

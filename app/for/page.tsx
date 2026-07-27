@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     title: 'Flashcard App for Competitive Exams India',
     description: 'Exam-specific AI flashcard pages for Indian competitive exams.',
   },
+  alternates: {
+    canonical: '/for/'
+  },
 }
 
 const exams = [

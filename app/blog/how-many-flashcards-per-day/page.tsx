@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'How Many Flashcards Should I Study Per Day?',
     description: 'Find your ideal daily flashcard count. Includes recommendations for NEET, JEE, UPSC & boards.',
   },
+  alternates: {
+    canonical: '/blog/how-many-flashcards-per-day/'
+  },
 }
 
 export default function HowManyFlashcardsPerDay() {

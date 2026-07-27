@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'Active Recall Techniques for NEET — Study Strategies That Work',
     description: 'Active recall techniques tailored for NEET UG. Flashcards, self-testing, and AI scoring.',
   },
+  alternates: {
+    canonical: '/blog/active-recall-for-neet/'
+  },
 }
 
 export default function ActiveRecallForNeet() {

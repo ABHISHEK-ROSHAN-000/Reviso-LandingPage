@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: 'FAQ — Frequently Asked Questions About Reviso',
     description: 'Is Reviso free? How does AI scoring work? Answers to common questions.',
   },
+  alternates: {
+    canonical: '/faq/'
+  },
 }
 
 const faqSchema = {

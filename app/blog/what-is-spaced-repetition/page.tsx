@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'What Is Spaced Repetition? A Complete Guide',
     description: 'Learn how spaced repetition works and why it is the most efficient way to study.',
   },
+  alternates: {
+    canonical: '/blog/what-is-spaced-repetition/'
+  },
 }
 
 const articleSchema = {

@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'How to Memorize Fast for Exams — Science-Backed Study Methods',
     description: 'Memorize faster with active recall, spaced repetition, and AI flashcards.',
   },
+  alternates: {
+    canonical: '/blog/how-to-memorize-fast-for-exams/'
+  },
 }
 
 export default function HowToMemorizeFastForExams() {

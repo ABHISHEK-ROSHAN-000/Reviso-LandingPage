@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'Turn Textbook Photo into Flashcards — AI Scanning Guide',
     description: 'Photograph any textbook page and get AI flashcards instantly.',
   },
+  alternates: {
+    canonical: '/blog/textbook-photo-to-flashcards/'
+  },
 }
 
 export default function TextbookPhotoToFlashcards() {

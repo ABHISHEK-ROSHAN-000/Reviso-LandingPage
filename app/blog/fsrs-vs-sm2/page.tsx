@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'FSRS vs SM-2 — Which Spaced Repetition Algorithm Is Better?',
     description: 'Compare FSRS and SM-2. FSRS is 15-30% more efficient and adapts to your memory.',
   },
+  alternates: {
+    canonical: '/blog/fsrs-vs-sm2/'
+  },
 }
 
 export default function FsrsVsSm2() {

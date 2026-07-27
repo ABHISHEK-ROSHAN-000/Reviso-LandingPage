@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'The Forgetting Curve Explained — Why We Forget and How to Stop It',
     description: 'Learn why we forget so fast and how spaced repetition can flatten the forgetting curve.',
   },
+  alternates: {
+    canonical: '/blog/forgetting-curve-explained/'
+  },
 }
 
 const articleSchema = {

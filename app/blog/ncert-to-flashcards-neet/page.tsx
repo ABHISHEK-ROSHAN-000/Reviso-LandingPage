@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'NCERT to Flashcards for NEET — Chapter-by-Chapter Guide',
     description: 'Convert NCERT Biology, Chemistry, Physics into AI flashcards for NEET.',
   },
+  alternates: {
+    canonical: '/blog/ncert-to-flashcards-neet/'
+  },
 }
 
 export default function NcertToFlashcardsNeet() {

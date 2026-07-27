@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   description: 'Stop manually writing flashcards. Learn how to turn your notes into AI-generated flashcards in seconds. Perfect for NEET, JEE, UPSC, and board exam prep.',
   openGraph: {
     title: 'How to Make Flashcards from Notes — AI-Powered Guide',
-    description: 'Turn your notes into AI-generated flashcards in seconds. Stop manual card creation.',
+    description: 'Stop manually writing flashcards. Learn how to turn your notes into AI-generated flashcards in seconds.',
+  },
+  alternates: {
+    canonical: '/blog/how-to-make-flashcards-from-notes/'
   },
 }
 

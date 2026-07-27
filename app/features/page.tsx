@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     title: 'Reviso Features — AI-Powered Flashcard Learning',
     description: 'AI flashcard generation, photo-to-cards, AI answer scoring, and FSRS spaced repetition.',
   },
+  alternates: {
+    canonical: '/features/'
+  },
 }
 
 const features = [

@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'UPSC Current Affairs Flashcards — Turn Daily Notes into AI Cards',
     description: 'Turn UPSC current affairs notes into AI flashcards automatically.',
   },
+  alternates: {
+    canonical: '/blog/upsc-current-affairs-flashcards/'
+  },
 }
 
 export default function UpscCurrentAffairsFlashcards() {

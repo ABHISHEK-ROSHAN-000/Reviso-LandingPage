@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'JEE Physics Formula Flashcards — AI-Generated',
     description: 'Turn JEE Physics formula sheets into AI flashcards. Photograph, generate, review.',
   },
+  alternates: {
+    canonical: '/blog/jee-physics-formula-flashcards/'
+  },
 }
 
 export default function JeePhysicsFormulaFlashcards() {

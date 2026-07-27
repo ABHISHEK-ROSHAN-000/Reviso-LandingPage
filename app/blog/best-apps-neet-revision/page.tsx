@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: 'Best App for NEET Revision — Flashcard Apps Compared',
     description: 'Compare the best apps for NEET revision. Reviso, czed, FlashGenius, and more.',
   },
+  alternates: {
+    canonical: '/blog/best-apps-neet-revision/'
+  },
 }
 
 export default function BestAppsNeetRevision() {
