@@ -28,6 +28,7 @@ const jsonLd = {
       "@id": `${SITE_URL}/#website`,
       "url": SITE_URL,
       "name": "Reviso",
+      "alternateName": ["Reviso AI Flashcards", "Study with Reviso"],
       "description": "AI-Powered Flashcard Learning App",
       "publisher": {
         "@id": `${SITE_URL}/#organization`
@@ -37,6 +38,7 @@ const jsonLd = {
       "@type": "SoftwareApplication",
       "@id": `${SITE_URL}/#application`,
       "name": "Reviso",
+      "alternateName": "Reviso AI Flashcards",
       "url": SITE_URL,
       "description": "AI-powered flashcard learning app that turns notes and images into smart study materials with spaced repetition and active recall.",
       "applicationCategory": "EducationalApplication",
@@ -50,13 +52,6 @@ const jsonLd = {
         { "@type": "ImageObject", "url": `${SITE_URL}/reviso-homescreen-mockup-half-trans.png` }
       ],
       "featureList": "AI flashcard generation, spaced repetition, progress analytics, adaptive review, image-to-cards, AI answer scoring",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "1250",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "author": {
         "@id": `${SITE_URL}/#organization`
       }
@@ -65,6 +60,7 @@ const jsonLd = {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
       "name": "Reviso",
+      "alternateName": ["Reviso AI Flashcards", "Study with Reviso"],
       "url": SITE_URL,
       "logo": {
         "@type": "ImageObject",

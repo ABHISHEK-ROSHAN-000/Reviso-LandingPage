@@ -13,13 +13,13 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://studywithreviso.in
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Reviso — Free AI Flashcard App for NEET, JEE & UPSC | Study with Reviso',
-    template: '%s | Reviso AI Flashcards',
+    default: 'Reviso - Free AI Flashcard App for NEET, JEE & UPSC',
+    template: '%s | Reviso',
   },
-  description: 'AI-powered flashcard app for Indian competitive exams. Turn NCERT notes, textbook photos, and handwritten notes into smart flashcards. Free, FSRS-based spaced repetition. Built for NEET, JEE, UPSC & CBSE.',
+  description: 'Reviso is a free AI flashcard app for Indian competitive exams. Turn NCERT notes, textbook photos, and handwritten notes into smart flashcards with FSRS-based spaced repetition for NEET, JEE, UPSC, and CBSE.',
   keywords: ['AI flashcards', 'NEET flashcards app', 'JEE flashcards', 'UPSC flashcards', 'spaced repetition', 'study app India', 'flashcard generator', 'NCERT flashcards', 'Reviso app', 'free flashcard app', 'exam preparation app', 'ai flashcard generator India'],
   authors: [{ name: 'Reviso' }],
-  applicationName: 'Reviso AI Flashcards',
+  applicationName: 'Reviso',
   creator: 'Reviso',
   publisher: 'Reviso',
   formatDetection: {
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: SITE_URL,
-    siteName: 'Reviso AI Flashcards',
-    title: 'Reviso — Free AI Flashcard App for NEET, JEE & UPSC',
-    description: 'Turn notes, textbook photos, and handwritten pages into AI flashcards. Free spaced repetition app built for Indian competitive exams.',
+    siteName: 'Reviso',
+    title: 'Reviso - Free AI Flashcard App for NEET, JEE & UPSC',
+    description: 'Reviso is a free AI flashcard app that turns notes, textbook photos, and handwritten pages into smart flashcards for Indian competitive exams.',
     images: [
       {
         url: '/reviso-homescreen-mockup-og.png',
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Reviso — Free AI Flashcard App',
-    description: 'Turn notes into AI flashcards. Free for NEET, JEE & UPSC prep.',
+    title: 'Reviso - Free AI Flashcard App',
+    description: 'Reviso turns notes into AI flashcards. Free for NEET, JEE, and UPSC prep.',
     images: ['/reviso-homescreen-mockup-og.png'],
   },
   robots: {

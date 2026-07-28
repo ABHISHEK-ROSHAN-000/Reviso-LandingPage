@@ -40,7 +40,7 @@ export default function HowManyFlashcardsPerDay() {
         <p>The key insight: FSRS automatically schedules reviews so you never see more cards than you can handle. If you miss a day, the algorithm adjusts. There is no "falling behind" in spaced repetition — the algorithm simply reschedules.</p>
 
         <p className="pt-4">
-          <Link href="/features/study-analytics" className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300">
+          <Link href="/features/" className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300">
             Set your daily goal in Reviso →
           </Link>
         </p>
