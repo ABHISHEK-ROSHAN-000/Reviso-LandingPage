@@ -1,26 +1,28 @@
+import { ArrowRight, Zap } from "lucide-react"
+
 export function CTA() {
   return (
-    <section id="download" className="relative overflow-hidden border-t border-border/50">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(70,90,255,0.30),transparent_50%),radial-gradient(ellipse_at_bottom,rgba(123,92,255,0.22),transparent_50%),radial-gradient(ellipse_at_left,rgba(18,214,255,0.16),transparent_50%),radial-gradient(ellipse_at_center,rgba(255,255,255,0.04),transparent_60%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
-
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-32 lg:px-10 lg:py-44">
-        <p className="mb-8 font-mono text-[11px] uppercase tracking-[0.25em] text-foreground/60">[ 05 / Begin ]</p>
-        <h2 className="max-w-3xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-balance text-foreground/95 sm:text-5xl lg:text-6xl">
-          Start Learning Smarter
+    <section id="download" className="border-t border-border/50 px-5 py-5 sm:px-8 sm:py-8 lg:px-10 lg:py-10">
+      <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[2rem] bg-[#dfff8f] px-6 py-20 text-center text-[#11140e] sm:px-10 lg:py-28">
+        <div className="absolute inset-0 opacity-50 [background-image:repeating-radial-gradient(circle_at_50%_110%,transparent_0,transparent_45px,rgba(0,0,0,0.12)_46px,transparent_47px)]" />
+        <Zap className="relative mx-auto h-7 w-7" fill="currentColor" />
+        <h2 className="relative mx-auto mt-7 max-w-4xl text-balance text-5xl font-medium leading-[0.9] tracking-[-0.06em] sm:text-7xl lg:text-8xl">
+          Make what you learn
           <br />
-          with AI Flashcards
-          <br />
-          you <span className="underline decoration-foreground/30 underline-offset-[6px]">never forget</span>.
+          <span className="font-serif font-normal italic">stay with you.</span>
         </h2>
-
-        <div className="mt-14 flex flex-col gap-6 sm:flex-row">
-          <a href="https://play.google.com/store/apps/details?id=com.reviso.app" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 border-b border-foreground/40 pb-1.5 font-mono text-xs uppercase tracking-[0.25em] text-foreground transition-colors hover:border-foreground">
-            <span>Available on Play Store</span>
-            <span className="transition-transform group-hover:translate-x-1">→</span>
-          </a>
-
-        </div>
+        <p className="relative mx-auto mt-7 max-w-xl text-sm leading-6 text-black/55 sm:text-base">
+          Your first deck is only a photo away. Download Reviso and start building a memory that lasts.
+        </p>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.reviso.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative mt-9 inline-flex h-13 items-center gap-3 rounded-full bg-[#10120f] px-5 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-black"
+        >
+          Get Reviso free
+          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.8} />
+        </a>
       </div>
     </section>
   )
