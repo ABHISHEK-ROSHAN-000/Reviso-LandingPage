@@ -140,307 +140,198 @@
 <div class="container">
 
 <h1>Reviso Privacy Policy</h1>
-<span class="last-updated">Last updated: July 15, 2026</span>
+<span class="last-updated">Last updated: August 3, 2026</span>
 <p class="subtitle">
-  Contact: <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span><br>
-  Website: <a href="https://studywithreviso.in/privacy" target="_blank" rel="noopener">https://studywithreviso.in/privacy</a>
+  Publisher: Reviso<br>
+  Contact: <a href="mailto:studywithreviso@gmail.com">studywithreviso@gmail.com</a><br>
+  Website: <a href="https://studywithreviso.in/">https://studywithreviso.in/</a><br>
+  <a href="https://studywithreviso.in/terms.html">Terms of Service</a> |
+  <a href="https://studywithreviso.in/delete-account.html">Account Deletion</a>
 </p>
 
-<!-- ============================================================ -->
-<h2>1. Introduction</h2>
-<!-- ============================================================ -->
+<h2>1. Scope and Who We Are</h2>
 
-<p>Reviso (referred to as <strong>"we"</strong>, <strong>"us"</strong>, or <strong>"our"</strong>) is an AI-powered flashcard study application. This Privacy Policy explains how we collect, use, store, and share your personal information when you use the Reviso app (the <strong>"App"</strong>).</p>
+<p>Reviso is the publisher of the Reviso flashcard and study application (the <strong>"App"</strong>). This Privacy Policy explains what information the App and its service providers collect, why it is used, where it is stored, when it is shared, and the choices available to you.</p>
 
-<p>By downloading, installing, or using the App, you agree to the collection and use of information in accordance with this policy. If you do not agree with any part of this policy, please do not use the App.</p>
+<p>The App is intended only for people who are at least 18 years old. This policy applies to the App, its Railway-hosted backend, and the account, AI, advertising, analytics, and backup features described below.</p>
 
-<p>This policy complies with the Digital Personal Data Protection Act, 2023 (DPDP Act) of India, and is aligned with international best practices including the General Data Protection Regulation (GDPR) where applicable.</p>
+<h2>2. Information We Collect and Store</h2>
 
-<!-- ============================================================ -->
-<h2>2. Information We Collect</h2>
-<!-- ============================================================ -->
+<h3>2.1 Account and profile information</h3>
+<p>When you sign in with Google through Firebase Authentication, we receive your email address, display name, Google profile photo URL, sign-in provider information, and a Firebase user ID (UID). Firebase and Google also process authentication tokens and security metadata needed to sign you in. A profile image you choose inside the App is stored locally on your device.</p>
 
-<h3>2.1 Information you provide directly</h3>
+<p>You may provide a school or institution name, daily study goal, preferred study time, and onboarding answers such as subject, experience, study goal, study challenge, and how you heard about Reviso. Completion and update timestamps are also recorded.</p>
 
-<p><strong>Account registration data.</strong> When you sign in using Google Sign-In, we receive the following information from your Google account through Firebase Authentication:</p>
+<h3>2.2 Study data and data stored on your device</h3>
+<p>The App stores its main study data locally in an SQLite database. This includes:</p>
 <ul>
-  <li>Your email address</li>
-  <li>Your display name (as set in your Google account)</li>
-  <li>Your profile photo URL</li>
-  <li>A unique Firebase User ID (UID) assigned to your account</li>
+  <li>Deck and chapter names, descriptions, icons, positions, identifiers, and timestamps</li>
+  <li>Flashcard questions and answers</li>
+  <li>Card state and spaced-repetition scheduling data, including due dates, ratings, review counts, stability, difficulty, steps, lapses, and last-review times</li>
+  <li>Review logs, daily study statistics, streak and goal progress, and records used to keep deletions consistent across backup and restore operations</li>
 </ul>
 
-<p><strong>Content you create.</strong> You may create and store within the App:</p>
+<p>The App also stores ordinary preferences and operational data on your device, such as theme, reminders and notification schedules, daily goal, school name, study time, onboarding state, profile-image path, cached credit information, pending reward-intent identifiers, backup timestamps, and temporary files. Typed answers are used during a review and are sent off the device only when you request AI scoring. Images are accessed only when you select or capture one for a feature that needs it.</p>
+
+<h3>2.3 Cloud Firestore and backend records</h3>
+<p>Reviso uses Cloud Firestore for the following UID-linked records:</p>
 <ul>
-  <li>Flashcard decks (names, descriptions, optional icon images)</li>
-  <li>Individual flashcards (front-side text and back-side text)</li>
-  <li>Answers you type when reviewing cards</li>
-  <li>Profile images (selected from your device's photo gallery or camera)</li>
-  <li>Your school or institution name (optional, entered in your profile settings)</li>
+  <li><strong>Settings and onboarding:</strong> school name, daily goal, study time, onboarding answers and progress, completion state, and timestamps</li>
+  <li><strong>Credits and access:</strong> credit balance, reset and reward timestamps, creation time, and any whitelist status</li>
+  <li><strong>Reward verification and fraud prevention:</strong> reward-intent IDs, UID, status, expiry and processing times, AdMob transaction ID, ad unit, reward amount, and server-side verification callback timestamps; per-user cooldown state is also stored</li>
+  <li><strong>AI reports:</strong> if you report an AI result, the UID, feature, selected report reason, generated output you reported, report status, report ID, and timestamps; per-user report cooldown state is also stored</li>
+  <li><strong>Account deletion status:</strong> a minimal UID-keyed suppression and status record with request, update, and completion timestamps</li>
 </ul>
 
-<h3>2.2 Information generated automatically by your use</h3>
+<p>The backend is hosted on Railway. It receives Firebase ID tokens and UIDs to authenticate requests, AI request content, credit and reward requests, report submissions, and account-deletion commands. Railway and the backend may process IP addresses, request paths, timestamps, response status, and other standard HTTP and security log data. Reviso does not intentionally store ordinary AI prompts, answers, or source images in its own backend database after a request, except that a generated AI output is stored when you deliberately submit that output as a report.</p>
 
-<p><strong>Study behaviour and progress.</strong> As you use the App to study, we automatically record:</p>
+<h3>2.4 AI request data</h3>
+<p>For AI answer scoring, the App sends the flashcard question, reference answer, and the answer you typed to the Reviso backend. For image-to-flashcard generation, it sends the selected image, its media type, and instructions needed to generate cards. The backend sends this material to OpenRouter, which dynamically routes requests to downstream model providers. The model or provider handling a request can vary based on routing, availability, configuration, and fallback behavior.</p>
+
+<p>Reviso does not use your content to train AI models. However, Reviso has not verified a binding zero-retention or no-training guarantee from OpenRouter or every dynamically selected downstream provider. OpenRouter and those providers may retain or use request data under their own terms, privacy policies, and routing settings. Do not submit confidential, regulated, or sensitive personal information to AI features.</p>
+
+<h3>2.5 Google Drive backups</h3>
+<p>After you authorize Google Drive access, the App can create backups manually and can run backups automatically. It keeps up to five versioned snapshots in the hidden Reviso app-data folder in your own Google Drive account. Each backup is a gzip-compressed JSON file containing decks, chapters, cards, daily statistics, review logs, sync-deletion records, and the backed-up daily-goal and school-name preferences.</p>
+
+<p>The backup is <strong>not encrypted by the App</strong>. Google may apply its own transport and storage protections, but gzip is compression, not encryption. The Reviso backend cannot access your Drive backups; access is performed by the App using the Drive authorization you grant. Backups can remain in Google Drive after uninstalling the App unless they are separately deleted.</p>
+
+<h3>2.6 Analytics, device, and advertising data</h3>
+<p>Firebase Analytics may collect an app-instance identifier, the Firebase UID set after sign-in, app and device information, approximate location derived from network information, sessions, screens, and events. Events include sign-in and onboarding, deck and card creation, review activity and ratings, streaks and goals, AI feature use and scores, ad interactions, notification interactions, credits, and backup or restore activity. These events can include numeric identifiers and counts, but Reviso does not intentionally send flashcard text or typed answer text as analytics event parameters.</p>
+
+<p>Google AdMob and its SDKs may process IP address, advertising or app identifiers, device and app information, diagnostic data, consent signals, and ad requests, impressions, clicks, video completion, and reward events. For rewarded ads, Google sends server-side verification data to Reviso so the backend can validate the reward and prevent duplicate or fraudulent credit claims.</p>
+
+<h2>3. Why We Use Information</h2>
 <ul>
-  <li>Number of cards reviewed per day</li>
-  <li>Your ratings on each card (Again, Hard, Good, Easy)</li>
-  <li>Scheduling data computed by the spaced-repetition algorithm (FSRS), including review intervals, stability scores, and difficulty scores</li>
-  <li>Your review streak and daily goal progress</li>
-  <li>Timestamps of when each review took place</li>
+  <li>Authenticate accounts and keep account access secure</li>
+  <li>Provide flashcards, reviews, spaced-repetition scheduling, reminders, settings, and cross-device account preferences</li>
+  <li>Process AI scoring and image-to-flashcard requests and return generated results</li>
+  <li>Operate credits, rewarded ads, server-side reward verification, abuse prevention, and deletion suppression</li>
+  <li>Create and restore Drive backups when authorized</li>
+  <li>Investigate voluntarily submitted AI reports and improve safety and quality</li>
+  <li>Measure reliability and feature usage, diagnose errors, and improve the App</li>
+  <li>Display, measure, and where permitted personalize advertising</li>
+  <li>Comply with law, enforce the <a href="https://studywithreviso.in/terms.html">Terms of Service</a>, and protect users, Reviso, and service providers</li>
 </ul>
 
-<p><strong>Answer text submitted for AI scoring.</strong> When you use the AI-powered answer-scoring feature, the following information is sent from your device to our backend server and then to a third-party AI service provider (currently <strong>NVIDIA NIM</strong> via <strong>build.nvidia.com</strong> and <strong>OpenRouter</strong>):</p>
-<ul>
-  <li>The question (front side) of the flashcard</li>
-  <li>The reference answer (back side) of the flashcard</li>
-  <li>The answer you typed</li>
-</ul>
-<p><strong>Important:</strong> Your study content — including card text, answers, and images — is sent to our AI provider (NVIDIA NIM / OpenRouter) only for the purpose of generating scores or creating flashcards. <strong>We do not use your content to train or improve AI models.</strong> Each AI provider's data handling practices are governed by their own privacy policy (see Section 4). We recommend that you do not include sensitive personal information in your flashcard content.</p>
+<p>Where applicable law requires a legal basis, processing may be necessary to provide the service you request, based on consent (for example, certain ad choices or Drive authorization), necessary for legitimate security and service-improvement interests, or required by law. You may withdraw consent where applicable, but a feature that needs the relevant data may then stop working.</p>
 
-<p><strong>Flashcard generation from images.</strong> If you use the image-to-flashcard feature, the image you select is encoded as base64 data and sent to our backend and then to the AI provider (NVIDIA NIM / OpenRouter). No image data is permanently stored by us — it is used only to generate the flashcard content and is then discarded.</p>
-
-<p><strong>App preferences.</strong> We store the following preferences locally on your device:</p>
-<ul>
-  <li>Theme preference (light / dark / system)</li>
-  <li>Notification reminder time and frequency</li>
-  <li>Daily review goal</li>
-  <li>First-launch flag (to show onboarding)</li>
-  <li>Cached study streak count</li>
-</ul>
-<p><strong>Note:</strong> School name, daily goal, and reminder preferences are synced to Cloud Firestore so they persist across devices. You can update or clear them at any time in Profile.</p>
-
-<h3>2.3 Backup data (optional)</h3>
-
-<p><strong>Google Drive backup.</strong> If you choose to use the optional Google Drive backup feature (available in Profile → Backup &amp; Restore), the following data is uploaded from your device to a hidden, app-specific folder in your personal Google Drive account (the "appDataFolder") — it is not uploaded to Reviso's servers:</p>
-<ul>
-  <li>All your flashcard decks, chapters, and cards</li>
-  <li>Your full review history (revlog)</li>
-  <li>Daily study statistics</li>
-  <li>Sync-deletion records</li>
-  <li>App preferences (daily goal, school name)</li>
-</ul>
-<p>This backup is stored under your own Google account and is not accessible to Reviso. You control when backups are created or restored. Backups persist in your Drive until you delete them (even if you uninstall the app or delete your Reviso account). You can remove the backup file at any time via Profile → Backup &amp; Restore, or by managing your Google Drive app data.</p>
-
-<h3>2.4 Information collected by third-party SDKs</h3>
-
-<p><strong>Google AdMob.</strong> The App uses Google AdMob to serve advertisements. AdMob automatically collects:</p>
-<ul>
-  <li>Device advertising identifiers (Google Advertising ID on Android)</li>
-  <li>IP address</li>
-  <li>Device model, operating system version, and app version</li>
-  <li>Ad interaction data (impressions, clicks, video completion events)</li>
-</ul>
-<p>This data is collected and processed by Google in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
-
-<p><strong>Firebase SDKs.</strong> The App integrates Firebase Core, Firebase Authentication, Cloud Firestore, and Firebase Analytics. These SDKs automatically collect:</p>
-<ul>
-  <li>Instance ID (a unique identifier for your app installation)</li>
-  <li>Operating system version and device model</li>
-   <li>App version</li>
-  <li>In-app usage events, including: review sessions started and completed, card ratings, onboarding steps completed, streak milestones, daily goal completions, ad interactions (rewarded and interstitial), and AI scoring usage</li>
-  <li>Screen navigation history within the App (screen names and transitions)</li>
-  <li>Session duration and engagement metrics</li>
-  <li>Country or region (derived from IP address at the time of collection; the IP address itself is not stored by Google)</li>
-  <li>Your Firebase user ID (linked to your account after you sign in, so that usage events can be associated with your account)</li>
-</ul>
-<p>Firebase data is processed by Google in accordance with <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy documentation</a>.</p>
-
-<p><strong>Backend hosting (Railway).</strong> Our backend server is hosted on Railway. Standard HTTP server logs containing IP addresses, request timestamps, and request paths are generated as part of normal server operation.</p>
-
-<!-- ============================================================ -->
-<h2>3. How We Use Your Information</h2>
-<!-- ============================================================ -->
-
-<p>We use the information collected for the following purposes:</p>
-
-<ul>
-  <li><strong>To provide the core study experience.</strong> Your flashcards, decks, and study data are stored locally on your device so you can review cards, track your progress, and schedule future reviews using the spaced-repetition algorithm.</li>
-   <li><strong>To enable AI answer scoring.</strong> When you request an AI evaluation of your answer, your card's question, reference answer, and your typed answer are sent to our backend and then to one of our AI service providers (NVIDIA NIM or OpenRouter). The score is returned to you and displayed within the App. This text is <strong>not permanently stored by us beyond the duration of the request</strong>. AI providers may process data according to their own policies (see Section 4).</li>
-  <li><strong>To generate flashcards from images.</strong> When you use the image-to-card feature, your image is temporarily processed by the AI service to create flashcard content. The image is not stored permanently.</li>
-  <li><strong>To manage the credit system.</strong> Your credit balance is stored securely on our backend server. Credits are consumed when you use AI features and can be replenished by watching rewarded ads.</li>
-  <li><strong>To process ad rewards.</strong> When you voluntarily choose to watch a rewarded ad, your account is credited with in-app credits after the ad completes successfully.</li>
-  <li><strong>To schedule study reminders.</strong> Your notification preferences (time, frequency, daily goal) are stored locally to send you local push notifications as requested.</li>
-  <li><strong>To authenticate your account.</strong> Your Firebase authentication data is used to verify your identity when communicating with our backend server.</li>
-  <li><strong>To show advertisements.</strong> AdMob uses your device advertising ID and app usage signals to serve relevant advertisements within the App.</li>
-  <li><strong>To measure feature usage and improve the App.</strong> Firebase Analytics tracks in-app events (such as review sessions, onboarding completion, card ratings, streak milestones, and ad interactions) linked to your Firebase user ID after sign-in. This data is processed by Google and used to understand how users engage with the App and where improvements can be made.</li>
-</ul>
-
-<!-- ============================================================ -->
-<h2>4. Information Shared With Third Parties</h2>
-<!-- ============================================================ -->
-
-<p>We share your personal information with the following third-party service providers only as necessary to provide the App's functionality. <strong>We do not sell your personal data to any third party.</strong></p>
+<h2>4. When Information Is Shared</h2>
+<p>Reviso does not sell personal information for money. Information is disclosed to service providers as needed for the purposes described in this policy:</p>
 
 <div class="table-wrap"><table>
   <thead>
     <tr>
-      <th>Third Party</th>
-      <th>Data Shared</th>
+      <th>Recipient</th>
+      <th>Information</th>
       <th>Purpose</th>
-      <th>Privacy Policy</th>
+      <th>More information</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Google Firebase (Firebase Auth, Cloud Firestore)</td>
-      <td>Email address, display name, profile photo URL, Firebase UID; user settings (school name, daily goal, reminder preferences)</td>
-      <td>User authentication, account management, credit system</td>
-      <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
+      <td>Google Firebase</td>
+      <td>Account identity, UID, authentication and security data, settings, onboarding data, credits, access state, AI reports, reward-verification records, and deletion status</td>
+      <td>Authentication, Firestore storage, account security, credits, reporting, fraud prevention, and deletion</td>
+      <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy information</a></td>
     </tr>
     <tr>
-      <td>Google Firebase Analytics</td>
-      <td>Firebase user ID, app instance ID, device model, OS version, country/region, screen views, and in-app events (review sessions, onboarding steps, card ratings, streak milestones, ad interactions)</td>
-      <td>App usage measurement and product improvement</td>
-      <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
+      <td>Google Analytics for Firebase</td>
+      <td>UID, app-instance identifier, device and app data, approximate region, screens, sessions, and usage events</td>
+      <td>Analytics, diagnostics, and product improvement</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td>
     </tr>
     <tr>
-      <td>Google AdMob</td>
-      <td>Device advertising ID (GAID / IDFA), IP address, device model, OS version, ad interaction data (impressions, clicks, video events)</td>
-      <td>Serving advertisements, including rewarded ads and interstitial ads</td>
-      <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+      <td>Google AdMob and User Messaging Platform (UMP)</td>
+      <td>Identifiers, IP address, device and app data, consent signals, ad interactions, and reward-verification callback data</td>
+      <td>Ads, privacy choices, measurement, rewards, and fraud prevention</td>
+      <td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google advertising information</a></td>
     </tr>
     <tr>
-      <td>NVIDIA NIM (build.nvidia.com) — AI large language model provider</td>
-      <td>Card question text, reference answer text, user-typed answer text, base64-encoded image data (for vision features)</td>
-      <td>AI-powered answer scoring and flashcard generation from images</td>
-      <td><a href="https://www.nvidia.com/en-us/privacy-center/" target="_blank" rel="noopener">nvidia.com/privacy-center</a></td>
+      <td>Google Drive</td>
+      <td>Gzip-compressed JSON backup snapshots and file metadata</td>
+      <td>User-authorized backup and restore in the user's app-data folder</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td>
     </tr>
     <tr>
-      <td>OpenRouter — AI large language model gateway</td>
-      <td>Card question text, reference answer text, user-typed answer text, base64-encoded image data (for vision features)</td>
-      <td>AI-powered answer scoring and flashcard generation from images</td>
-      <td><a href="https://openrouter.ai/privacy" target="_blank" rel="noopener">openrouter.ai/privacy</a></td>
+      <td>OpenRouter and dynamically routed downstream model providers</td>
+      <td>Questions, reference answers, typed answers, selected images, media type, and AI instructions</td>
+      <td>AI scoring and flashcard generation</td>
+      <td><a href="https://openrouter.ai/privacy" target="_blank" rel="noopener">OpenRouter Privacy Policy</a></td>
     </tr>
     <tr>
-      <td>Railway (app hosting provider)</td>
-      <td>Standard HTTP server logs (IP addresses, request paths, timestamps)</td>
-      <td>Hosting the backend server that powers AI scoring and the credit system</td>
-      <td><a href="https://railway.com/legal/privacy" target="_blank" rel="noopener">railway.com/legal/privacy</a></td>
+      <td>Railway</td>
+      <td>Backend requests and standard hosting, network, and security log data</td>
+      <td>Backend hosting and operation</td>
+      <td><a href="https://railway.com/legal/privacy" target="_blank" rel="noopener">Railway Privacy Policy</a></td>
     </tr>
   </tbody>
 </table></div>
 
-<p>We may also disclose your information if required to do so by law, regulation, or legal process (for example, in response to a court order or government request).</p>
+<p>We may also disclose information when reasonably necessary to comply with law or valid legal process, investigate abuse or security incidents, protect legal rights or safety, or complete a business reorganization. If control of Reviso changes, this policy and applicable law continue to govern the transferred information.</p>
 
-<!-- ============================================================ -->
-<h2>5. Advertising</h2>
-<!-- ============================================================ -->
+<h2>5. AI Features and Reports</h2>
+<p>AI features are optional and consume credits. AI responses can be inaccurate, incomplete, unsafe, or unsuitable for your circumstances. Review generated cards and scores before relying on them.</p>
 
-<p>The App displays advertisements served by Google AdMob. We use two types of ad formats:</p>
+<p>AI request content passes through the Railway-hosted Reviso backend to OpenRouter and a dynamically selected downstream model provider. Reviso itself does not train models with your content. This statement does not create a no-retention or no-training promise on behalf of OpenRouter or downstream providers, and Reviso has no verified guarantee that every routed provider applies zero retention or excludes all training use.</p>
+
+<p>If you choose <strong>Report AI output</strong>, the reported generated output, selected reason, feature, UID, status, and timestamps are stored so Reviso can review the report. Reporting is separate from ordinary AI processing and makes that output persist until account deletion.</p>
+
+<h2>6. Advertising and Privacy Choices</h2>
+<p>The App uses AdMob interstitial ads at transition points and optional rewarded ads that provide credits after successful verification. Declining a rewarded ad does not remove ordinary study access, although no reward is issued.</p>
+
+<p>Where required, Google's User Messaging Platform (UMP) presents or manages privacy and consent choices that govern how AdMob may serve ads. You can revisit available privacy choices in the App when that option is required and available. You can also use Android's advertising privacy and ad-personalization controls. Depending on your choice and region, ads may be personalized or non-personalized; ads may still appear after you decline personalization.</p>
+
+<h2>7. Storage, Security, and International Processing</h2>
+<p>Study content is primarily stored on your device. Account and operational records are stored with Firebase; the backend runs on Railway; AI content is processed through OpenRouter and downstream providers; analytics and ads are processed by Google; and authorized backups are stored in your Google Drive account.</p>
+
+<p>Reviso uses HTTPS for network requests, Firebase ID-token authentication for backend endpoints, Firestore access controls, scoped Drive authorization, and server-side checks for credits and ad rewards. Drive backup files are gzip JSON and are not separately encrypted by the App. No security method is perfect, so Reviso cannot guarantee absolute security. Keep your device and Google account protected.</p>
+
+<p>These providers may process information in India, the United States, or other countries where they operate. Data-protection rules can differ between countries. Providers apply their own transfer mechanisms and safeguards as described in their policies.</p>
+
+<h2>8. Retention and Deletion</h2>
+<p><strong>Local data.</strong> Study data, preferences, profile files, and caches remain on the device until you remove them, complete in-app account deletion, clear app data, or uninstall the App. Uninstalling ordinarily clears Reviso's local app data only; it does not delete your Firebase account, Firestore/backend records, Analytics data, or Drive backups.</p>
+
+<p><strong>Firestore account records.</strong> There is no Firestore time-to-live (TTL) policy for Reviso's account records. Settings and onboarding data, credits, whitelist state, AI reports and report state, reward intents and reward state, and AdMob server-side verification or fraud-prevention records remain while the account is active. They are deleted as part of completed account deletion.</p>
+
+<p><strong>AI requests and hosting logs.</strong> Reviso does not intentionally retain ordinary AI request content in its own application database after returning the result, but OpenRouter, downstream model providers, Railway, and Google may retain request, diagnostic, or security data according to their own policies and legal obligations. Reviso cannot promise a specific upstream retention period or zero retention.</p>
+
+<p><strong>Drive backups.</strong> Up to five backup versions remain in the hidden Drive app-data folder until replaced, pruned, or deleted. In-app account deletion attempts to remove all Reviso Drive backups. If Drive authorization is unavailable, account deletion continues and the App provides instructions to remove the hidden app data manually from Google Account or Drive settings. The Reviso backend cannot perform that cleanup for you.</p>
+
+<p><strong>Analytics.</strong> On account deletion, Reviso submits deletion of linked Firebase Analytics user data through the Google Analytics Admin API and resets local analytics identifiers. Google may need time to process that request. Aggregate or de-identified measurements may remain under Google's retention practices and are not necessarily associated with your deleted account. In the rare case where an older App version already removed authentication before an interrupted Analytics request completed, Reviso displays a deletion reference and directs the user to the verified email support process to finish the request.</p>
+
+<p><strong>Deletion-integrity record.</strong> Reviso retains a minimal UID-keyed account-deletion suppression/status record, including status and request, update, and completion timestamps, indefinitely. This record prevents deleted data or delayed reward callbacks from recreating an account and supports resumable, verifiable deletion. It does not contain your flashcards, AI content, settings, credit balance, or email address.</p>
+
+<p><strong>Account deletion process.</strong> Deletion is network-dependent, occurs in stages, and is not instant. The process is designed to resume safely after interruption. It removes the Firebase Auth account, UID-linked settings and onboarding records, credits and whitelist state, AI reports and report state, reward intents and reward state, AdMob SSV transaction records, ordinary local app data, and accessible Drive backups, subject to the exceptions above. See the <a href="https://studywithreviso.in/delete-account.html">Account Deletion page</a> for the complete process.</p>
+
+<p>You may also request deletion by emailing <a href="mailto:studywithreviso@gmail.com">studywithreviso@gmail.com</a>. Reviso will process a valid email request within 30 days and may require identity verification before acting.</p>
+
+<h2>9. Your Rights and Choices</h2>
+<p>Depending on where you live, you may have rights to access, correct, obtain a copy of, delete, restrict, or object to processing of personal information; withdraw consent; or complain to a data-protection authority. These rights can be subject to legal exceptions.</p>
 
 <ul>
-  <li><strong>Interstitial ads</strong> — Full-screen ads that appear at natural transition points between card reviews, with frequency limits to minimise disruption.</li>
-  <li><strong>Rewarded ads</strong> — Optional video ads that you may voluntarily choose to watch in exchange for in-app credits (5 credits per ad). You are shown a clear opt-in prompt describing the reward before the ad plays. You can decline without any consequence to your use of the App.</li>
+  <li>Edit flashcards and available profile or study settings directly in the App.</li>
+  <li>Use the in-app deletion flow or the external email alternative described above.</li>
+  <li>Use UMP choices where presented and Android advertising controls for ad personalization.</li>
+  <li>Decline or revoke Drive authorization through your Google Account. Revoking access does not itself delete an existing hidden backup.</li>
+  <li>Avoid AI features or AI reports if you do not want the relevant content processed as described.</li>
 </ul>
 
-<p>AdMob may use your device's advertising identifier to serve ads that are relevant to your interests (personalized ads). You can control personalized advertising as follows:</p>
+<p>To exercise a right that is not available in the App, email <a href="mailto:studywithreviso@gmail.com">studywithreviso@gmail.com</a>. Reviso may ask for information reasonably needed to verify your identity and account and will respond within the period required by applicable law.</p>
+
+<h2>10. Adults Only</h2>
+<p>Reviso is an 18+ service and is not intended for children or anyone under 18. Do not create an account or use the App if you are under 18. If you believe a person under 18 has provided personal information to Reviso, email <a href="mailto:studywithreviso@gmail.com">studywithreviso@gmail.com</a> so the account and data can be investigated and deleted as appropriate.</p>
+
+<h2>11. Changes to This Policy</h2>
+<p>Reviso may update this Privacy Policy to reflect changes to the App, providers, law, or data practices. The date at the top will be updated. Material changes may also be communicated in the App or by another reasonable method before they take effect where required. Review this page periodically for the current policy.</p>
+
+<h2>12. Contact and Related Policies</h2>
+<p>For privacy questions, complaints, or rights requests, contact:</p>
 <ul>
-  <li><strong>Android:</strong> Open Google Settings → Ads → Opt out of Ads Personalization.</li>
-
-</ul>
-
-<p>If you opt out of personalized ads, you will still see ads, but they may be less relevant to you.</p>
-
-<p class="placeholder-note">
-  <!-- NOTE: The ad unit IDs currently configured in the App are Google-provided test IDs. Before the App is published to a production store, the developer must replace them with real AdMob ad unit IDs generated from the AdMob console. -->
-</p>
-
-<!-- ============================================================ -->
-<h2>6. Data Storage &amp; Security</h2>
-<!-- ============================================================ -->
-
-<p><strong>Where your data is stored:</strong></p>
-<ul>
-  <li><strong>On your device (local storage):</strong> Most of your study data — flashcards, decks, review history, daily statistics, and app preferences — is stored locally on your device in a SQLite database (<code>flashlearn.db</code>) and in SharedPreferences. Profile images are saved to your device's application documents directory. This data never leaves your device unless you explicitly use a feature that transmits it (such as AI scoring).</li>
-  <li><strong>On Firebase servers:</strong> Your Firebase authentication credentials are managed by Google's Firebase Auth service. User settings (school name, daily goal, reminder preferences) are synced to Cloud Firestore.</li>
-  <li><strong>On your Google Drive (optional backup):</strong> When you use the optional backup feature, a gzipped JSON snapshot of your study data is uploaded to a hidden, app-specific folder in your personal Google Drive ("appDataFolder"). This data is stored under your Google account, not on Reviso's servers. You can delete it at any time.</li>
-  <li><strong>On our backend server (Railway):</strong> The backend server processes AI scoring requests and manages the credit system. It does not permanently store your flashcard content, answers, or images — it passes data to the AI provider (NVIDIA NIM or OpenRouter) and returns the result.</li>
-</ul>
-
-<p><strong>Security measures:</strong></p>
-<ul>
-  <li>All communication between the App and our backend uses HTTPS encryption.</li>
-  <li>Authentication to the backend is secured using Firebase ID tokens (JWTs).</li>
-  <li>Firestore access is governed by Firebase Security Rules, limiting access to authenticated users.</li>
-  <li>The backend admin endpoint (for credit management) is protected by an API key verified using constant-time comparison.</li>
-</ul>
-
-<p><strong>No system is 100% secure.</strong> While we implement industry-standard security measures, we cannot guarantee the absolute security of your data. You are responsible for keeping your device and Google account credentials secure.</p>
-
-<!-- ============================================================ -->
-<h2>7. Data Retention</h2>
-<!-- ============================================================ -->
-
-<p><strong>Credit data.</strong> Your credit balance, managed by our backend server, is retained while your account remains active. Credits are refreshed on a schedule determined by the server (typically every 24 hours). There is no automatic deletion of credit records.</p>
-
-<p><strong>Study and flashcard data.</strong> Your flashcards, decks, review history, and daily statistics are stored locally on your device. This data is retained until you manually delete individual items (decks, cards) or uninstall the App.</p>
-
-<p><strong>Account data.</strong> You can delete your account at any time directly from the Profile page using the Delete Account button. When you initiate deletion, the following data is permanently removed immediately:</p>
-
-<ul>
-  <li>Your Firebase Auth record</li>
-  <li>Your Firestore data (user settings, credit records, and whitelist status)</li>
-  <li>All locally stored data on your device (SQLite database, SharedPreferences, and profile image)</li>
-</ul>
-
-<p>Firebase Analytics usage data linked to your Firebase user ID is submitted to Google for deletion. Google may take up to 180 days to fully remove this data from all systems.</p>
-
-<p>Residual server data: Our backend server (hosted on Railway) stores credit records that are not yet automatically removed by the in-app deletion flow. If you want to ensure these server-side records are also removed, please email <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span> with the subject line 'Account Deletion Request' and your account email address. We will manually process this within 30 days.</p>
-
-<p><strong>Local data on uninstall.</strong> When you uninstall the App, all locally stored data (SQLite database, SharedPreferences, profile images) is automatically removed from your device. Data stored on our backend (Firebase credits, auth records) is not automatically deleted on uninstall — you must request deletion as described above.</p>
-
-<p><strong>Backup copies in Google Drive.</strong> If you have created a backup using the optional Google Drive backup feature, a copy of your study data remains in your Google Drive appDataFolder even after you uninstall the app or delete your Reviso account. To remove this backup, either use Profile → Back up now (which overwrites it) and then delete it, or remove the app data directly through your Google Account settings (Google → Manage your data &amp; privacy → Third-party apps &amp; services → Reviso → Delete hidden app data).</p>
-
-<!-- ============================================================ -->
-<h2>8. Your Rights &amp; Choices</h2>
-<!-- ============================================================ -->
-
-<p>Depending on your jurisdiction, you may have the following rights regarding your personal data:</p>
-
-<ul>
-  <li><strong>Right to access:</strong> You may request a copy of the personal data we hold about you by contacting us.</li>
-  <li><strong>Right to rectification:</strong> You may correct inaccurate data. Most of your data can be edited directly within the App (e.g., flashcard content, deck names, profile information).</li>
-  <li><strong>Right to deletion ("right to be forgotten"):</strong> You can delete your account at any time from the Profile page using the Delete Account button. This immediately removes your Firebase account, Firestore data, and all locally stored data. Alternatively, you may email <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span> to request manual deletion, which we will process within 30 days.</li>
-  <li><strong>Right to opt out of personalized advertising:</strong> You can disable personalized ads through your device settings as described in Section 5 above.</li>
-  <li><strong>Right to withdraw consent:</strong> If you have consented to a data-processing activity, you may withdraw your consent at any time. Please note that withdrawing consent for data processing that is essential to the App's functionality may prevent you from using certain features.</li>
-</ul>
-
-<p>To exercise any of these rights, please contact us at <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span>. We will respond to your request within a reasonable timeframe and in accordance with applicable law.</p>
-
-<!-- ============================================================ -->
-<h2>9. Children's Privacy</h2>
-<!-- ============================================================ -->
-
-<p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. The App does not include an age gate or ask for the user's age during onboarding.</p>
-
-<p>If you are a parent or guardian and believe that your child has provided us with personal information without your consent, please contact us at <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span>. We will take steps to delete the information promptly.</p>
-
-<p>If you are a parent or educator using this App with minors, please review this policy and contact us before use. The App does not set <code>tagForChildDirectedTreatment</code> on its ad requests, which means ads shown may not be filtered for child-appropriate content.</p>
-
-<!-- ============================================================ -->
-<h2>10. Changes to This Privacy Policy</h2>
-<!-- ============================================================ -->
-
-<p>We may update this Privacy Policy from time to time. When we make material changes, we will notify you by one or more of the following methods:</p>
-<ul>
-  <li>Displaying an in-app notice or prompt</li>
-  <li>Updating the "Last updated" date at the top of this policy</li>
-  <li>Sending an email notification (if we have your email address) where feasible</li>
-</ul>
-
-<p>We encourage you to review this Privacy Policy periodically. Your continued use of the App after any changes to this policy constitutes your acceptance of the updated policy.</p>
-
-<!-- ============================================================ -->
-<h2>11. Contact Us</h2>
-<!-- ============================================================ -->
-
-<p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
-
-<ul>
-  <li><strong>App:</strong> Reviso</li>
-  <li><strong>Email:</strong> <span class="placeholder"><!-- FILL IN: your-email@domain.com -->studywithreviso@gmail.com</span></li>
-  <li><strong>Website:</strong> <a href="https://studywithreviso.in/privacy" target="_blank" rel="noopener">https://studywithreviso.in/privacy</a></li>
+  <li><strong>Publisher:</strong> Reviso</li>
+  <li><strong>Email:</strong> <a href="mailto:studywithreviso@gmail.com">studywithreviso@gmail.com</a></li>
+  <li><strong>Website:</strong> <a href="https://studywithreviso.in/">https://studywithreviso.in/</a></li>
+  <li><strong>Terms:</strong> <a href="https://studywithreviso.in/terms.html">Terms of Service</a></li>
+  <li><strong>Deletion:</strong> <a href="https://studywithreviso.in/delete-account.html">Account Deletion</a></li>
 </ul>
 
 <div class="footer">

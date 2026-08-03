@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Delete Your Reviso Account</title>
-  <meta name="description" content="Instructions to permanently delete your Reviso account and all associated data, including flashcards, decks, review history, and server records.">
+  <meta name="description" content="Instructions to delete your Reviso account, associated app data, and Google Drive backups, with details about the retained deletion-integrity record.">
   <link rel="canonical" href="https://studywithreviso.in/delete-account.html">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -90,52 +90,80 @@
 <div class="container">
 
 <h1>Account Deletion</h1>
-<span class="last-updated">Last updated: June 26, 2026</span>
+<span class="last-updated">Last updated: August 3, 2026</span>
 <p class="subtitle">
-  Contact: studywithreviso@gmail.com
+  Publisher: Reviso<br>
+  Contact: <a href="mailto:studywithreviso@gmail.com">studywithreviso@gmail.com</a><br>
+  <a href="https://studywithreviso.in/privacy.html">Privacy Policy</a> |
+  <a href="https://studywithreviso.in/terms.html">Terms of Service</a>
 </p>
 
-<h2>Delete from within the App (Recommended)</h2>
-
-<p>The easiest way to delete your account is directly from the App:</p>
-
+<h2>Delete in the App</h2>
+<p>The recommended method is the authenticated deletion flow:</p>
 <ol>
-  <li>Open Reviso and go to the <strong>Profile</strong> page.</li>
-  <li>Scroll to the bottom and tap <strong>Delete Account</strong>.</li>
-  <li>Confirm through the two-step dialog.</li>
-  <li>You will be asked to sign in with Google once more to verify your identity before deletion proceeds.</li>
+  <li>Open Reviso and select <strong>Profile</strong>.</li>
+  <li>Select <strong>Delete Account</strong> and review the confirmation screens.</li>
+  <li>Confirm deletion and complete Google re-authentication if requested.</li>
+  <li>Keep a network connection while Reviso works through the deletion stages.</li>
 </ol>
 
-<p>Once confirmed, the following is deleted <strong>immediately and permanently</strong>:</p>
+<p>Deletion is network-dependent and is <strong>not instant</strong>. It runs in resumable stages so the App can continue after a timeout, connection failure, or restart. If deletion is interrupted, reopen Reviso and sign in with the same Google account if prompted to continue. Do not create new data while deletion is pending.</p>
+
+<h2>Data Deleted</h2>
+<p>When all applicable stages complete, Reviso deletes the following:</p>
 
 <ul>
-  <li>Your Firebase Auth record (your account is removed)</li>
-  <li>Your Firestore data (user settings, credit records, and whitelist status)</li>
-  <li>All flashcards, decks, and review history stored locally on your device</li>
-  <li>All app preferences and cached data stored on your device</li>
-  <li>Your locally saved profile image</li>
+  <li><strong>Firebase Authentication:</strong> your Reviso sign-in account and Firebase Auth UID account</li>
+  <li><strong>Profile and settings:</strong> the Firestore <code>users</code> record, including school name, daily goal, study time, onboarding answers and progress, and related timestamps</li>
+  <li><strong>Credits and access:</strong> <code>user_credits</code> and <code>whitelisted_users</code> records</li>
+  <li><strong>AI reports:</strong> reported AI outputs, report reasons, feature, status, and timestamps in <code>ai_reports</code>, plus per-user report state in <code>ai_report_users</code></li>
+  <li><strong>Ad rewards and fraud-prevention data:</strong> <code>ad_reward_intents</code>, per-user state in <code>ad_reward_users</code>, and UID-linked <code>admob_ssv_transactions</code>, including transaction, reward, ad-unit, and callback-processing data</li>
+  <li><strong>Local study database:</strong> decks, chapters, cards, daily statistics, review logs, scheduling data, and sync-deletion records</li>
+  <li><strong>Other ordinary local app data:</strong> settings, onboarding state, cached credit and pending reward data, backup timestamps, profile images, migration copies, temporary files, and scheduled notifications</li>
 </ul>
 
-<p><strong>Firebase Analytics data</strong> linked to your account is submitted to Google for deletion. Google may take up to 180 days to fully remove this data from their systems.</p>
+<p>There is no Firestore TTL for the listed records while an account is active. The account-deletion process explicitly deletes them.</p>
 
-<h2>Residual Server Data</h2>
+<h2>Google Drive Backups</h2>
+<p>If you authorized backups, Reviso may have stored up to five versioned gzip JSON snapshots in the hidden Reviso app-data folder in your Google Drive. The files are not encrypted by the App. The Reviso backend cannot access them.</p>
 
-<p>Our backend server (hosted on Railway) stores credit records that are not yet automatically removed by the in-app deletion button. To ensure these records are also removed, please also email us using the instructions below.</p>
+<p>In-app account deletion attempts to remove all Reviso Drive backups. If Drive authorization is unavailable, expired, or denied, account deletion continues without blocking the remaining stages. The App will provide manual cleanup instructions because Reviso's backend cannot delete Drive files on your behalf.</p>
 
-<h2>Delete by Email (Alternative or for Server Data Removal)</h2>
-
-<p>If you are unable to access the app, or if you want to ensure all server-side credit records are removed:</p>
-
+<p>To remove a backup manually:</p>
 <ol>
-  <li>Email <strong>studywithreviso@gmail.com</strong> with the subject line <strong>"Account Deletion Request"</strong>.</li>
-  <li>Include the email address linked to your Reviso account.</li>
+  <li>Open <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">Google Account third-party connections</a> and select Reviso.</li>
+  <li>Remove Reviso's access and choose the option to delete its hidden app data if Google displays that option.</li>
+  <li>If needed, open Google Drive settings, select <strong>Manage apps</strong>, find Reviso, and use <strong>Delete hidden app data</strong>.</li>
 </ol>
 
-<p>We will manually process your request within <strong>30 days</strong> and confirm once complete.</p>
+<p>Google may change the names or locations of these controls. Removing Drive authorization alone does not necessarily delete an existing backup.</p>
 
-<h2>Locally Stored Data</h2>
+<h2>Analytics Deletion</h2>
+<p>Reviso submits deletion of user-linked Firebase Analytics data through the Google Analytics Admin API and resets local analytics identifiers. Google's processing may take time. Aggregate or de-identified analytics may remain under Google's retention practices and may not be associated with your deleted account.</p>
 
-<p>Flashcards, decks, review history, and app preferences are stored only on your device. This data is automatically removed when you delete your account using the in-app button, or when you uninstall the App. No further action is needed to remove local data.</p>
+<p>If an account was already removed by an older App version before an interrupted deletion could submit its Analytics request, the old Firebase identity can no longer be safely authenticated automatically. Reviso will display a deletion reference and direct you to email <a href="mailto:studywithreviso@gmail.com">studywithreviso@gmail.com</a> so the remaining request can be handled through the verified support process.</p>
+
+<h2>Record Retained Indefinitely</h2>
+<p>Reviso retains one minimal Firestore <code>account_deletions</code> suppression/status record keyed by your Firebase UID. It contains deletion status and request, update, and completion timestamps. It is retained indefinitely to prevent delayed reward callbacks or other processes from recreating deleted data and to preserve resumable deletion integrity.</p>
+
+<p>This retained marker does not contain your email address, settings, credit balance, flashcards, answers, images, AI outputs, or ad-reward transaction history.</p>
+
+<h2>Delete by Email</h2>
+<p>If you cannot use the App, email is an external alternative:</p>
+
+<ol>
+  <li>Email <a href="mailto:studywithreviso@gmail.com?subject=Account%20Deletion%20Request">studywithreviso@gmail.com</a> with the subject <strong>Account Deletion Request</strong>.</li>
+  <li>Identify the Google email address used for your Reviso account.</li>
+  <li>Complete any reasonable identity-verification step requested to protect the account from unauthorized deletion.</li>
+</ol>
+
+<p>Reviso will process a valid email deletion request within <strong>30 days</strong>. Do not send passwords, Google tokens, or identity documents unless Reviso specifically explains why a limited verification item is needed.</p>
+
+<h2>Uninstalling Is Not Account Deletion</h2>
+<p>Uninstalling Reviso ordinarily clears the App's local database, preferences, profile files, and caches from that device. It does not delete your Firebase Authentication account, Firestore/backend records, Firebase Analytics data, or Google Drive backups. Use the in-app deletion flow or the email alternative to delete the cloud account and associated data.</p>
+
+<h2>More Information</h2>
+<p>See the <a href="https://studywithreviso.in/privacy.html">Privacy Policy</a> for full collection, sharing, security, and retention details and the <a href="https://studywithreviso.in/terms.html">Terms of Service</a> for the rules governing the App. Questions can be sent to <a href="mailto:studywithreviso@gmail.com">studywithreviso@gmail.com</a>.</p>
 
 <div class="footer">
   &copy; 2026 Reviso. All rights reserved.
