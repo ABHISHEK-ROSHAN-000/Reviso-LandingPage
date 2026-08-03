@@ -159,7 +159,7 @@
 
 <p>The Reviso backend cannot access Drive backups. The App accesses them using your Google authorization. You are responsible for maintaining your Google account and for reviewing restored data. Backups and restores can fail because of permissions, network conditions, storage, incompatible versions, provider outages, or corrupted data. Keep any independent copy you consider important.</p>
 
-<p>In-app account deletion attempts to remove Reviso backups. If Drive authorization is unavailable, account deletion continues and you must follow the provided Google Account or Drive instructions to delete remaining hidden app data manually. Uninstalling the App does not delete cloud backups.</p>
+<p>In-app account deletion requires Google Drive access so Reviso backups can be removed. If Drive authorization is unavailable or denied, deletion stops and you must restore Google Drive access to complete deletion. Uninstalling the App does not delete cloud backups.</p>
 
 <h2>10. Acceptable Use</h2>
 <p>You must not:</p>
@@ -193,7 +193,7 @@
 <h2>14. Account Deletion and Termination</h2>
 <p>You may request account deletion in the App from <strong>Profile &gt; Delete Account</strong>. Deletion requires network access, may require recent Google re-authentication, runs in stages, and is not instant. It is designed to resume if interrupted. The process attempts to delete your Firebase Auth account, UID-linked settings, credits and access state, AI reports, reward and fraud-prevention records, ordinary local app data, and authorized Drive backups.</p>
 
-<p>If Drive authorization is unavailable, account deletion continues, but backup files may remain until you delete Reviso's hidden app data through Google Account or Drive settings. User-linked Firebase Analytics deletion is submitted through the Google Analytics Admin API and local identifiers are reset, although aggregate or de-identified data may remain under Google's retention practices.</p>
+<p>If Drive authorization is unavailable, deletion stops and you must restore Google Drive access to complete it. On deletion, Reviso removes the analytics user identifier linked to your account and resets local analytics identifiers on your device; Firebase Analytics data already collected before deletion remains under Google's retention practices and is no longer linked to your deleted account.</p>
 
 <p>A minimal UID-keyed deletion suppression/status record with timestamps is retained indefinitely for security and deletion integrity. As an external alternative, email <a href="mailto:studywithreviso@gmail.com">studywithreviso@gmail.com</a>. A valid request will be processed within 30 days and may require identity verification. Full details are on the <a href="https://studywithreviso.in/delete-account.html">Account Deletion page</a>.</p>
 

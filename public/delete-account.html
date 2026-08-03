@@ -127,7 +127,7 @@
 <h2>Google Drive Backups</h2>
 <p>If you authorized backups, Reviso may have stored up to five versioned gzip JSON snapshots in the hidden Reviso app-data folder in your Google Drive. The files are not encrypted by the App. The Reviso backend cannot access them.</p>
 
-<p>In-app account deletion attempts to remove all Reviso Drive backups. If Drive authorization is unavailable, expired, or denied, account deletion continues without blocking the remaining stages. The App will provide manual cleanup instructions because Reviso's backend cannot delete Drive files on your behalf.</p>
+<p>In-app account deletion requires Google Drive access so all Reviso Drive backups can be removed. If Drive authorization is unavailable, expired, or denied, deletion stops and the App asks you to restore Drive access and try again. The Reviso backend cannot delete Drive files on your behalf.</p>
 
 <p>To remove a backup manually:</p>
 <ol>
@@ -138,10 +138,8 @@
 
 <p>Google may change the names or locations of these controls. Removing Drive authorization alone does not necessarily delete an existing backup.</p>
 
-<h2>Analytics Deletion</h2>
-<p>Reviso submits deletion of user-linked Firebase Analytics data through the Google Analytics Admin API and resets local analytics identifiers. Google's processing may take time. Aggregate or de-identified analytics may remain under Google's retention practices and may not be associated with your deleted account.</p>
-
-<p>If an account was already removed by an older App version before an interrupted deletion could submit its Analytics request, the old Firebase identity can no longer be safely authenticated automatically. Reviso will display a deletion reference and direct you to email <a href="mailto:studywithreviso@gmail.com">studywithreviso@gmail.com</a> so the remaining request can be handled through the verified support process.</p>
+<h2>Analytics Data</h2>
+<p>When your account is deleted, Reviso removes the analytics user identifier linked to your account and resets local analytics identifiers on your device. Firebase Analytics data already collected before deletion is not deleted by the App and remains subject to Google's retention practices, but Reviso no longer links new analytics activity to your deleted account.</p>
 
 <h2>Record Retained Indefinitely</h2>
 <p>Reviso retains one minimal Firestore <code>account_deletions</code> suppression/status record keyed by your Firebase UID. It contains deletion status and request, update, and completion timestamps. It is retained indefinitely to prevent delayed reward callbacks or other processes from recreating deleted data and to preserve resumable deletion integrity.</p>
